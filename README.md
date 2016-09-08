@@ -1,3 +1,6 @@
+# 360 Life Stream 
+This is the repository for the 360 Life Stream project website for COMP 523.
+
 ## Installation
 `sudo gem install jekyll`
 
