@@ -12,5 +12,5 @@ permalink: /rules/
 5. End times on meetings will be observed. Members will not be required to stay past a set end time.
 
 ## Coding Practices
-1. We will follow the Google style guide for C++, Python, and Django
-2. We will use the GitHub work flow for code version control
+1. We will follow the Google style guide for [C++](https://google.github.io/styleguide/cppguide.html), [Python](https://google.github.io/styleguide/pyguide.html), and [Django](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
+2. We will use the [GitHub workflow](https://guides.github.com/introduction/flow/) for code version control
