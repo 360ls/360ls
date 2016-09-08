@@ -14,4 +14,6 @@ This is the repository for the 360 Life Stream project website for COMP 523.
 Head over to http://localhost:4000/360/ls in your browser.
 
 ## Deploying to Github Pages
-`jgd`
+Commit the local changes and push to the master branch.
+
+run `jgd` in the repository directory. 
