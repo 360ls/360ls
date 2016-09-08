@@ -20,3 +20,4 @@ http://dongy7.github.io/360ls/specification/
 http://dongy7.github.io/360ls/stories/
 http://dongy7.github.io/360ls/testing/
 
+http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting

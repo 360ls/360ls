@@ -5,9 +5,24 @@
     <description>Project page for 360 Life Stream</description>
     <link>http://dongy7.github.io/360ls/</link>
     <atom:link href="http://dongy7.github.io/360ls/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 07 Sep 2016 21:40:07 -0400</pubDate>
-    <lastBuildDate>Wed, 07 Sep 2016 21:40:07 -0400</lastBuildDate>
+    <pubDate>Wed, 07 Sep 2016 21:53:52 -0400</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2016 21:53:52 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>First Team Meeting</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Established team roles and rules&lt;/li&gt;
+  &lt;li&gt;Divided up tasks for the requirements sprint&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 07 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting</link>
+        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
