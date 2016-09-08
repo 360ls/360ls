@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Team Rules
-permalink: /rules/
 ---
 
 ## Team Behavior

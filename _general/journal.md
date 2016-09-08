@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Journal
-permalink: /journal/
 ---
 
 Summary of team meetings.
