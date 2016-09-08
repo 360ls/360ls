@@ -3,6 +3,8 @@
 
 `sudo gem install jgd`
 
+`git clone https://github.com/dongy7/360ls.git`
+
 ## Running Locally
 `jekyll serve`
 
