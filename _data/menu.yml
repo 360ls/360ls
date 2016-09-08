@@ -13,15 +13,15 @@
 - title: "Requirements Deliverables"
   subcategories:
       - subtitle: "Project Concept"
-        subhref: "/concept"
+        subhref: "/requirements/concept"
       - subtitle: "User Stories"
-        subhref: "/stories"
+        subhref: "/requirements/stories"
       - subtitle: "Personas"
-        subhref: "/personas"
+        subhref: "/requirements/personas"
       - subtitle: "Platform Analysis and Selection"
-        subhref: "/platform"
+        subhref: "/requirements/platform"
       - subtitle: "Prototype"
-        subhref: "/prototype"
+        subhref: "/requirements/prototype"
 
 - title: "Sprint Deliverables"
   subcategories:

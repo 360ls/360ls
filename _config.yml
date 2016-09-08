@@ -6,6 +6,10 @@ markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 collections:
     general:
         output: true
+    requirements:
+        output: true
+    sprint:
+        output: true
 
 permalink: blog/:year/:month/:day/:title
 exclude: ["Makefile", "README.md"]
