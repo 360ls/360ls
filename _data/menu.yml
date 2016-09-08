@@ -4,6 +4,8 @@
         subhref: "/general/intro"
       - subtitle: "Schedule of Standing Meetings"
         subhref: "/general/schedule"
+      - subtitle: "Contact Information"
+        subhref: "/general/contact"
       - subtitle: "Team Rules"
         subhref: "/general/rules"
       - subtitle: "Journal"
