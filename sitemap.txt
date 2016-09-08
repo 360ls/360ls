@@ -1,7 +1,22 @@
 
+http://dongy7.github.io/360ls/code/
+http://dongy7.github.io/360ls/concept/
+http://dongy7.github.io/360ls/design/
 http://dongy7.github.io/360ls/feed.xml
 http://dongy7.github.io/360ls/
+http://dongy7.github.io/360ls/intro/
+http://dongy7.github.io/360ls/journal/
+http://dongy7.github.io/360ls/links/
 http://dongy7.github.io/360ls/css/main.css
+http://dongy7.github.io/360ls/manual/
+http://dongy7.github.io/360ls/personas/
+http://dongy7.github.io/360ls/platform/
+http://dongy7.github.io/360ls/prototype/
+http://dongy7.github.io/360ls/repository/
 http://dongy7.github.io/360ls/rules/
+http://dongy7.github.io/360ls/schedule/
 http://dongy7.github.io/360ls/sitemap.txt
+http://dongy7.github.io/360ls/specification/
+http://dongy7.github.io/360ls/stories/
+http://dongy7.github.io/360ls/testing/
 
