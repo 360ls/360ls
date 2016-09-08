@@ -1,12 +1,12 @@
 # 360 Life Stream 
 This is the repository for the 360 Life Stream project website for COMP 523.
 
-## Installation
+## Pre-requisites
+This website is built using [Jekyll](https://jekyllrb.com/). The `jgd` gem is used to build and deploy to github pages.
+
 `sudo gem install jekyll`
 
 `sudo gem install jgd`
-
-`git clone https://github.com/dongy7/360ls.git`
 
 ## Running Locally
 `jekyll serve`
