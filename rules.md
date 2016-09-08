@@ -13,4 +13,4 @@ permalink: /rules/
 
 ## Coding Practices
 1. We will follow the Google style guide for [C++](https://google.github.io/styleguide/cppguide.html), [Python](https://google.github.io/styleguide/pyguide.html), and [Django](https://docs.djangoproject.com/en/dev/internals/contributing/writing-code/coding-style/)
-2. We will use the [GitHub workflow](https://guides.github.com/introduction/flow/) for code version control
+2. We will use git/Github for version control and follow the [GitHub workflow](https://guides.github.com/introduction/flow/) as our main workflow.
