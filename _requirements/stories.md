@@ -39,7 +39,7 @@ title: User Stories and Use Cases
 	- Provide a name for the file
 
 - Delete Videos
-	- User presses a delete button on the video to remove a file from the storate
+	- User presses a delete button on the video to remove a file from the storage
 	- The system will prompt to make sure the user really wants to delete
 
 - Logout
