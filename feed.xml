@@ -5,12 +5,28 @@
     <description>Project page for 360 Life Stream</description>
     <link>http://dongy7.github.io/360ls/</link>
     <atom:link href="http://dongy7.github.io/360ls/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2016 10:14:11 -0400</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2016 10:14:11 -0400</lastBuildDate>
+    <pubDate>Mon, 12 Sep 2016 10:24:46 -0400</pubDate>
+    <lastBuildDate>Mon, 12 Sep 2016 10:24:46 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
-        <title>First Team Meeting</title>
+        <title>Client Meeting #2</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Client laid out the project tasks and schedule.&lt;/li&gt;
+  &lt;li&gt;Client walked through the initial designs.&lt;/li&gt;
+  &lt;li&gt;Team gave feedback on design and client revised the designs with ideas from the team.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 09 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://dongy7.github.io/360ls/blog/2016/09/09/client-meeting-2</link>
+        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/09/client-meeting-2</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Team Meeting #1</title>
         <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;Established team roles and rules&lt;/li&gt;
@@ -18,8 +34,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 07 Sep 2016 00:00:00 -0400</pubDate>
-        <link>http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting</link>
-        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting</guid>
+        <link>http://dongy7.github.io/360ls/blog/2016/09/07/team-meeting-1</link>
+        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/07/team-meeting-1</guid>
         
         
       </item>

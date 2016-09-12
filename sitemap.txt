@@ -4,4 +4,5 @@ http://dongy7.github.io/360ls/
 http://dongy7.github.io/360ls/css/main.css
 http://dongy7.github.io/360ls/sitemap.txt
 
-http://dongy7.github.io/360ls/blog/2016/09/07/first-meeting
+http://dongy7.github.io/360ls/blog/2016/09/09/client-meeting-2
+http://dongy7.github.io/360ls/blog/2016/09/07/team-meeting-1
