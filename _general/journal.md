@@ -3,7 +3,7 @@ layout: page
 title: Journal
 ---
 
-Summary of team meetings.
+Summary of meetings.
 
 <ul class="listing">
 {% for post in site.posts %}
