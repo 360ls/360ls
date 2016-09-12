@@ -5,8 +5,8 @@
     <description>Project page for 360 Life Stream</description>
     <link>http://dongy7.github.io/360ls/</link>
     <atom:link href="http://dongy7.github.io/360ls/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2016 10:24:46 -0400</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2016 10:24:46 -0400</lastBuildDate>
+    <pubDate>Mon, 12 Sep 2016 10:34:54 -0400</pubDate>
+    <lastBuildDate>Mon, 12 Sep 2016 10:34:54 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
     
       <item>
@@ -36,6 +36,24 @@
         <pubDate>Wed, 07 Sep 2016 00:00:00 -0400</pubDate>
         <link>http://dongy7.github.io/360ls/blog/2016/09/07/team-meeting-1</link>
         <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/07/team-meeting-1</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Client Meeting #1</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Client gave a summary of the project.&lt;/li&gt;
+  &lt;li&gt;Team shared previous experiences with technologies relevant to the project.&lt;/li&gt;
+  &lt;li&gt;Client walked through a high level architecture of project.&lt;/li&gt;
+  &lt;li&gt;Client talked through the target users.&lt;/li&gt;
+  &lt;li&gt;Established primary channel of communications for team and client.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 02 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://dongy7.github.io/360ls/blog/2016/09/02/client-meeting-1</link>
+        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/02/client-meeting-1</guid>
         
         
       </item>
