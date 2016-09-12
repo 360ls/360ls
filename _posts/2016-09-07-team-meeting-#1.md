@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "First Team Meeting"
+title: "Team Meeting #1"
 ---
 
 ## Summary 
