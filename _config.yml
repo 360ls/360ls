@@ -51,10 +51,10 @@ analytics:
 # Set 'provider' to the comment provider you want to use.
 # Set 'provider' to false to turn commenting off globally.
 #
-comments:
-    provider:
-    disqus:
-      short_name:
+comments: 
+    provider: disqus
+    disqus: 
+      short_name: 360ls
     livefyre:
       site_id:
     intensedebate:
