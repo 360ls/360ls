@@ -8,11 +8,11 @@ permalink: /
 
 ## Team
 
-Client Manager: Luke <br />
-Project Manager: Jonathan <br />
-Editor: Dong <br />
-Chief Architect: Spencer <br />
+Client Manager: [Luke](mailto:fernandl@cs.unc.edu) <br />
+Project Manager: [Jonathan](mailto:jdwitten@cs.unc.edu) <br />
+Editor: [Dong](mailto:dongyeop@cs.unc.edu) <br />
+Chief Architect: [Spencer](mailto:lewissa@cs.unc.edu) <br />
 
 ## Clients
 
-Steven King <br />
+[Steven King](mailto:steven.king@unc.edu) <br />
