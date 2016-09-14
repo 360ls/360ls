@@ -3,14 +3,14 @@ layout: page
 title: Platform Analysis and Selection
 ---
 
-*What we need*
+**What we need**
 We have identified two cases in which solutions need to be developed. The first is an Nvidia
 Jetson box that runs an Ubuntu variant. It will be located within vehicles. We must also
 develop a way for users to view recordings and live video outside of the vehicle.
 
-*Our Selection*
+**Our Decisions (final selections in bold)**
 * Ubuntu App
-    1. *Electron App*
+    1. **Electron App**
         An electron app can be built using familiar technology (HTML, CSS, and Javascript). 
         We hope to reuse components from our web app (discussed below).
         http://electron.atom.io/
@@ -21,7 +21,7 @@ develop a way for users to view recordings and live video outside of the vehicle
         http://en.wikipedia.org/wiki/Qt_(software)
 
 * App for viewing video beyond the box:
-    1. *Web App*
+    1. **Web App**
         We could build a responsive web app that will deliever good UX on all devices (computer,
         tablet, phone). It will allow for simpler development because we must build only one
         application, and it is the platform our team has the most experience with. We will 
