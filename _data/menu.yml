@@ -24,6 +24,10 @@
         subhref: "/requirements/platform"
       - subtitle: "Prototype"
         subhref: "/requirements/prototype"
+      - subtitle: "Requirements"
+        subhref: "/requirements/requirements"
+      - subtitle: "Interfaces"
+        subhref: "/requirements/interfaces"
 
 - title: "Sprint Deliverables"
   subcategories:
