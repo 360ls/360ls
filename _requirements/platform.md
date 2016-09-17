@@ -17,7 +17,7 @@ develop a way for users to view recordings and live video outside of the vehicle
         We chose OpenCV because it provides the stitching algorithms that we need to construct our
         360 degree video. OpenCV is also optimized to support GPU acceleration and multi-core
         to create real-time applications. We will use the Python wrappers for OpenCV because
-        we have much more experience with Python over C++, and since most of the work is done
+        we have much more experience with Python over C++, and since most of the processing work will be done
         by the OpenCV library, we don't expect much of a performance benefit by using C++. 
     2. MATLAB:
         MATLAB has a well-documented and easy-to-learn library for computer vision. However, since
