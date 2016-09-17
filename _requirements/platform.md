@@ -10,10 +10,11 @@ develop a way for users to view recordings and live video outside of the vehicle
 
 **Our Decisions (final selections in bold)**
 
-* Video Sticher
+* Video Stitcher
     1. **OpenCV**:
-        OpenCV is an open source library that implements various computer vision algorithms.
-        We chose OpenCV because it provides the sitching algorithms that we need to construct our
+        OpenCV is an open source library that implements various computer vision algorithms and provides
+				wrappers for various languages such as Python, C++ and Java.
+        We chose OpenCV because it provides the stitching algorithms that we need to construct our
         360 degree video. OpenCV is also optimized to support GPU acceleration and multi-core
         to create real-time applications. We will use the Python wrappers for OpenCV because
         we have much more experience with Python over C++, and since most of the work is done
