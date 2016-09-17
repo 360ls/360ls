@@ -16,10 +16,10 @@
   subcategories:
       - subtitle: "Project Concept"
         subhref: "/requirements/concept"
+      - subtitle: "Personas"
+      subhref: "/requirements/personas"
       - subtitle: "User Stories"
         subhref: "/requirements/stories"
-      - subtitle: "Personas"
-        subhref: "/requirements/personas"
       - subtitle: "Platform Analysis and Selection"
         subhref: "/requirements/platform"
       - subtitle: "Functional Spec"
