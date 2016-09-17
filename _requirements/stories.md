@@ -3,10 +3,10 @@ layout: page
 title: User Stories
 ---
 
-This portion of the website highlights the user stories acquired for the requirements sprint. The user stories are broken down by the personas we defined for our project [here](/personas).
+This portion of the website highlights the user stories acquired for the requirements sprint. The user stories are broken down by the personas we defined for our project [here](personas).
 
 ## Police Officer
-1. As a patrolling police officer, I can view a live-stream video of on-car video from an in-car touch-screen on the streaming device so ________
+1. As a patrolling police officer, I can view a live-stream video of on-car video from an in-car touch-screen on the streaming device.
 2. As a patrolling police officer, I can view all video in a web DVR offering for incidents with which I was involved.
 3. As a patrolling officer, I can search for videos by time-of-incident, and tags that I set up to correspond to time-of-incident. 
 4. As a patrolling officer, in the DVR player, I can manipulate video quality to get a better stream on a poor connection, and I can zoom in on different areas of the video.
