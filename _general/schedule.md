@@ -10,4 +10,4 @@ Fridays 1:25PM - 3:00PM
 Mondays 5:30PM - 6:30PM
 
 ## Team Meetings
-Wednesdays 5:30PM - 6:30PM
+Wednesdays 5:00PM - 6:00PM
