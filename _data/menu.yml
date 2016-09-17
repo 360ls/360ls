@@ -17,7 +17,7 @@
       - subtitle: "Project Concept"
         subhref: "/requirements/concept"
       - subtitle: "Personas"
-      subhref: "/requirements/personas"
+        subhref: "/requirements/personas"
       - subtitle: "User Stories"
         subhref: "/requirements/stories"
       - subtitle: "Platform Analysis and Selection"
