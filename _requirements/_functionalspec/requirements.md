@@ -3,7 +3,10 @@ layout: page
 title: Requirements
 ---
 
-## Priority Level 1
+This portion of the website highlights the requirements section of the functional specification for the requirements sprint. 
+
+
+### Priority Level 1
 
 1. There will be a display of a table of all accessible archived videos. This table will be able to be filtered by date and by officer.
 
