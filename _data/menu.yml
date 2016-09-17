@@ -22,12 +22,19 @@
         subhref: "/requirements/personas"
       - subtitle: "Platform Analysis and Selection"
         subhref: "/requirements/platform"
+      - subtitle: "Functional Spec"
+        subhref: "/requirements/functionalspec"
+        children:
+            - subtitle: "Use Cases"
+              subhref: "/requirements/functionalspec/usecases"
+            - subtitle: "Requirements"
+              subhref: "/requirements/functionalspec/requirements"
+            - subtitle: "Interfaces"
+              subhref: "/requirements/functionalspec/interfaces"
       - subtitle: "Prototype"
         subhref: "/requirements/prototype"
-      - subtitle: "Requirements"
-        subhref: "/requirements/requirements"
-      - subtitle: "Interfaces"
-        subhref: "/requirements/interfaces"
+      
+      
 
 - title: "Sprint Deliverables"
   subcategories:
