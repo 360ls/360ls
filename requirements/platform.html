@@ -112,14 +112,29 @@ Jetson box that runs an Ubuntu variant. It will be located within vehicles. We m
 develop a way for users to view recordings and live video outside of the vehicle.</p>
 
 <p><strong>Our Decisions (final selections in bold)</strong></p>
+
 <ul>
+  <li>Video Sticher
+    <ol>
+      <li><strong>OpenCV</strong>:
+ OpenCV is an open source library that implements various computer vision algorithms.
+ We chose OpenCV because it provides the sitching algorithms that we need to construct our
+ 360 degree video. OpenCV is also optimized to support GPU acceleration and multi-core
+ to create real-time applications. We will use the Python wrappers for OpenCV because
+ we have much more experience with Python over C++, and since most of the work is done
+ by the OpenCV library, we don’t expect much of a performance benefit by using C++.</li>
+      <li>MATLAB:
+ MATLAB has a well-documented and easy-to-learn library for computer vision. However, since
+ it is an interpreted language, it will be much harder to optimize for real-time stiching and encoding.</li>
+    </ol>
+  </li>
   <li>Ubuntu App
     <ol>
-      <li><strong>Electron App</strong>
+      <li><strong>Electron App</strong>:
  An electron app can be built using familiar technology (HTML, CSS, and Javascript). 
  We hope to reuse components from our web app (discussed below).
  http://electron.atom.io/</li>
-      <li>Native Linux GUI
+      <li>Native Linux GUI:
  We could alternatively build a GUI with something like Qt framework that will allow
  us to use C++. However it is technology that we are less comfortable with and seems 
  less intuitive for our simple UI.
@@ -128,7 +143,8 @@ develop a way for users to view recordings and live video outside of the vehicle
   </li>
   <li>App for viewing video beyond the box:
     <ol>
-      <li><strong>Web App</strong>
+      <li>
+        <p><strong>Web App</strong>:
  We could build a responsive web app that will deliever good UX on all devices (computer,
  tablet, phone). It will allow for simpler development because we must build only one
  application, and it is the platform our team has the most experience with. We will 
@@ -136,10 +152,14 @@ develop a way for users to view recordings and live video outside of the vehicle
  of the class team member is a Django expert should we encounter and difficulties.
  Alternatively we could go without a framework with PHP/ MySQL or use Rails but
  our collective knowledge of those technologies does not justify their use over Django
- when we have an expert at our disposal.</li>
-      <li>Native apps (iOS and Android) + Web app
+ when we have an expert at our disposal. For building and rendering our UI, we will use React
+ because it has a simpler component based model over a more complex framework like Angular.</p>
+      </li>
+      <li>
+        <p>Native apps (iOS and Android) + Web app:
  Building native apps could lead to a better experience for our users that view media
- on phones or tablets, however the increased development effort outweighs the benefit.</li>
+ on phones or tablets, however the increased development effort outweighs the benefit.</p>
+      </li>
     </ol>
   </li>
 </ul>
