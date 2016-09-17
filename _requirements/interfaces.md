@@ -2,6 +2,8 @@
 layout: page
 title: Interfaces
 ---
+# In-Vehicle App
+
 ## Login Screen
 {% include image.html url="../images/login.PNG" caption="" max_width="300px" %}
 
@@ -35,3 +37,18 @@ title: Interfaces
 - In this screen, the officer can browse past recordings and play them back. 
 - We decided to replace the share button with a flag button that will mark a recording as important.
 
+# Web App
+
+## Live Streaming View
+{% include image.html url="../images/web-dashboard.PNG" caption="" max_width="300px" %}
+
+- The left side will show a preview of all the live streams coming in. 
+- The right side will show the video of the currently selected stream.
+- User will be able to pan around the video.
+
+## DVR Screen
+{% include image.html url="../images/web-dvr.PNG" caption="" max_width="300px" %}
+
+- There will be a search bar at the top that can be used to filter the recordings.
+- Clicking on the column titles will sort the list by that field. 
+- The right side will show the current video that is being viewed.
