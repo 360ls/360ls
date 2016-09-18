@@ -23,7 +23,7 @@
       - subtitle: "Platform Analysis and Selection"
         subhref: "/requirements/platform"
       - subtitle: "Functional Spec"
-        subhref: "/requirements/functionalspec"
+        subhref: "/requirements/functionalspec.html"
         children:
             - subtitle: "Use Cases"
               subhref: "/requirements/functionalspec/usecases"

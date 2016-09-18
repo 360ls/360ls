@@ -3,7 +3,7 @@ layout: page
 title: User Stories
 ---
 
-This portion of the website highlights the user stories acquired for the requirements sprint. The user stories are broken down by the personas we defined for our project [here](/personas).
+This portion of the website highlights the user stories acquired for the requirements sprint. The user stories are broken down by the personas we defined for our project [here](personas).
 
 ## Police Officer
 1. As a patrolling police officer, I can view a live-stream video of on-car video from an in-car touch-screen on the streaming device so I can tell what is going on around me.
