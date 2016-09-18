@@ -10,8 +10,8 @@ This portion of the website highlights the use cases portion of the functional s
 - Login
 	- First time user creates an account
 	- Repeat users enter a username and password
-	- If a user forgets their password they can reset it
-	- If a user enters a wrong password it should display an error
+	- If a user forgets their password, they can reset it
+	- If a user enters a wrong password, an error is displayed and another password is requested
 
 - Filter Live Videos
 	- Filter the visible live videos to look for a specific officer's live feed
@@ -37,4 +37,28 @@ This portion of the website highlights the use cases portion of the functional s
 	- Prompt to log in as a different user
 
 ## On-box Linux Application
+- Login
+	- Upon entering the car, user enters a username and password
+	- If a user forgets their password, they can reset it
+	- If a user enters a wrong password, an error is displayed and another password is requested
+
 - Watch Live Video
+	- See the situation around the car from a live no-latency feed on the in-car box.
+
+- Filter Archived Videos
+	- The user can scroll through a list of all vidoes associated with their account
+	- Filter to find by date, etc.
+
+- Watch Archived Video
+	- Pause the video
+	- Rewind the video
+
+- Manually Start and Stop Recording
+	-The user can toggle between a recording and docile state
+
+- Logout
+	- Press button to sign out of an account
+	- Prompt to log in as a different user
+
+
+

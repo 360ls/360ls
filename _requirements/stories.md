@@ -6,11 +6,16 @@ title: User Stories
 This portion of the website highlights the user stories acquired for the requirements sprint. The user stories are broken down by the personas we defined for our project [here](/personas).
 
 ## Police Officer
-1. As a patrolling police officer, I can view a live-stream video of on-car video from an in-car touch-screen on the streaming device so ________
-2. As a patrolling police officer, I can view all video in a web DVR offering for incidents with which I was involved.
-3. As a patrolling officer, I can search for videos by time-of-incident, and tags that I set up to correspond to time-of-incident. 
-4. As a patrolling officer, in the DVR player, I can manipulate video quality to get a better stream on a poor connection, and I can zoom in on different areas of the video.
+1. As a patrolling police officer, I can view a live-stream video of on-car video from an in-car touch-screen on the streaming device so I can tell what is going on around me.
+2. As a patrolling police officer, I can tell whether or not my on-box live-stream video is being recorded or not so I have confirmation that my stream is being recorded when I am on a call. 
+3. As a patrolling police officer, I can flag an interaction for later viewing by the police chief and easy access in the web platform offering so that I can look back at my day and immediately know what the most important recordings are to look back over.
+4. As a patrolling police officer, I can view all videos in a web DVR offering for incidents with which I was involved so that I can act accordingly post-interaction.
+5. As a patrolling officer, I can filter videos in the wep app to easily get to the videos that are most pertinent in the moment.
+6. As a patrolling officer, I can flag videos as active to make sure they are not deleted/archived after the 12 month video transition deadline.
+7. As a patrolling officer, in the DVR player, I can manipulate video quality to get a better stream on a poor connection, and I can zoom in on different areas of the video so I can get more information about interactions (e.g. license plate numbers).
 
 ## Police Chief
-1. As a police chief
-5. I am a police chief and one of my officers has just returned from an incident and I am performing an evaluation on his performance, so I navigate to the 360LS web interface to view the video of the interaction. I log in using my police chief credentials and searches for the video from my officer’s car. I examine the video by panning around the screen and at some points pausing and rewinding the video to get a better look at the scene. I takes some notes to share with his officer and exits the system.
+1. As a police chief, I can view all videos in a web DVR offering for all incidents in my domain (i.e. from all officer feeds) so that I can evaluate the performance of each officer in my group.
+2. As a police chief, I can view and filter all live streams and recorded videos from all officers so I can look at old recordings as well as observe and impact live interactions by my team in the field.
+3. As a police chief, I can look at the videos flagged by all of my officers during the day and tell what interactions the officers thought were most important coming out of the day.
+4. As a police chief, I can manipulate video quality, pan around footage, pause, rewind, etc. to get a better look at individual recordings.
