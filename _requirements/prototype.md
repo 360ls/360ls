@@ -12,4 +12,4 @@ The stitcher uses the homography matrix to stitch together the two streams into 
 
 [Web App Prototype](http://vcms.herokuapp.com/)
 
-The prototype consists of a full-stack python Django environment hosted in a Heroku instance. For the prototype, we hooked into our [main project inventory](https://github.com/ASK-MEdia/360ls-vcms) and tied in a CircleCI build driver that builds dynamically from updates to the master branch of our GitHub profile. The prototype dependencies are packaged in a custom vagrant build for consistent development and testing on our local devices.
+The prototype consists of a full-stack python Django environment hosted in a Heroku instance. We have connected our repository to [CircleCI](https://circleci.com/), which automatically tests, builds and deploys our application when any commits are pushed to the repository. The prototype dependencies are packaged in a custom vagrant build for a consistent development and testing environment on our local machines.
