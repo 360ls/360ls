@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>360 Life Stream :: Prototype</title>
-    <meta name="description" content="Our prototype can be found at the following link.">
+    <meta name="description" content="Our prototype can be found at the following links.">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/requirements/prototype">
@@ -169,9 +169,14 @@
         <h1>Prototype</h1>
     </header>
 
-    <p>Our prototype can be found at the following link.</p>
+    <p>Our prototype can be found at the following links.</p>
 
-<p><a href="http://vcms.herokuapp.com/">Prototype</a></p>
+<p><a href="https://github.com/dongy7/360ls-stitcher">Video Stitcher Prototype</a></p>
+
+<p>The prototype is a realtime stitcher that can be configured to work with a 2 camera setup. It uses OpenCV to detect keypoints and compute the homography matrix.
+The stitcher uses the homography matrix to stitch together the two streams into a single stream.</p>
+
+<p><a href="http://vcms.herokuapp.com/">Web App Prototype</a></p>
 
 <p>The prototype consists of a full-stack python Django environment hosted in a Heroku instance. For the prototype, we hooked into our <a href="https://github.com/ASK-MEdia/360ls-vcms">main project inventory</a> and tied in a CircleCI build driver that builds dynamically from updates to the master branch of our GitHub profile. The prototype dependencies are packaged in a custom vagrant build for consistent development and testing on our local devices.</p>
 
