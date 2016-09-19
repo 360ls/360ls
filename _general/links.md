@@ -13,5 +13,8 @@ title: Related Links
 - [Django](https://docs.djangoproject.com/en/1.10/)
 - [React](https://facebook.github.io/react/index.html)
 - [AWS](https://aws.amazon.com/documentation/)
-- [Vagrant](https://www.vagrantup.com/docs/)
 - [Electron](http://electron.atom.io/)
+
+## DevTools
+- [Vagrant](https://www.vagrantup.com/docs/)
+- [CircleCI](https://circleci.com/docs/)
