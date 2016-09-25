@@ -3,7 +3,7 @@ layout: page
 title: Platform Analysis and Selection
 ---
 
-**What we need**
+**What we need**:
 We have identified two cases in which solutions need to be developed. The first is an Nvidia
 Jetson box that runs an Ubuntu variant. It will be located within vehicles. We must also
 develop a way for users to view recordings and live video outside of the vehicle.
