@@ -14,6 +14,8 @@ This portion of the website highlights the requirements section of the functiona
 
 3. Officers should be able to click on archived videos and see the video displayed in the player. They can pan around the video, pause the recording, and rewind.
 
+4. The app should require a log in before the user can achieve access to the system.
+
 ## Priority Level 2
 
 1. The system must be able to maintain records of users with two different classifications. One with access to all videos (Police Chief) and another with access to only their own videos (Officers).
@@ -26,8 +28,6 @@ This portion of the website highlights the requirements section of the functiona
 
 ## Priority Level 3
 
-1. The app should require a log in before the user can achieve access to the system.
+1. The system should maintain the state of each video (active, inactive, pending) in regards to its status in a criminal case
 
-2. The system should maintain the state of each video (active, inactive, pending) in regards to its status in a criminal case
-
-3. Users should not be able to delete videos. Archived videos will delete after 12 months automatically unless in an active state.
+2. Users should not be able to delete videos. Archived videos will delete after 12 months automatically unless in an active state.
