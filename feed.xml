@@ -5,9 +5,29 @@
     <description>Project page for 360 Life Stream</description>
     <link>http://dongy7.github.io/360ls/</link>
     <atom:link href="http://dongy7.github.io/360ls/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 25 Sep 2016 18:34:29 -0400</pubDate>
-    <lastBuildDate>Sun, 25 Sep 2016 18:34:29 -0400</lastBuildDate>
+    <pubDate>Tue, 27 Sep 2016 10:13:55 -0400</pubDate>
+    <lastBuildDate>Tue, 27 Sep 2016 10:13:55 -0400</lastBuildDate>
     <generator>Jekyll v3.2.1</generator>
+    
+      <item>
+        <title>Client Meeting #4</title>
+        <description>&lt;h2 id=&quot;summary&quot;&gt;Summary&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Set up the four cameras and captured sample videos for testing the stitching algorithm.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;goals&quot;&gt;Goals&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Optimize stitching algorithm to work with four 4K video streams.&lt;/li&gt;
+  &lt;li&gt;Implement output encodings to work with streaming service.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 23 Sep 2016 00:00:00 -0400</pubDate>
+        <link>http://dongy7.github.io/360ls/blog/2016/09/23/client-meeting-4</link>
+        <guid isPermaLink="true">http://dongy7.github.io/360ls/blog/2016/09/23/client-meeting-4</guid>
+        
+        
+      </item>
     
       <item>
         <title>Client Meeting #3</title>
