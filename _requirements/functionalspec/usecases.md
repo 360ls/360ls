@@ -60,5 +60,12 @@ This portion of the website highlights the use cases portion of the functional s
 	- Press button to sign out of an account
 	- Prompt to log in as a different user
 
+- Display a Stitched Video (use case of program to enable watching live video)
+	- Take video input from four camera streams and stitch it into one video
+	- Convert that stitched video into multiple encodings of a 360 degree video
+
+- Stream Video (use case of program to enable streamed video in on-box and web applications)
+	- Send stitched video to a server for storage
+	- Live stream stitched video from server storage and live device stitched footage
 
 
