@@ -15,6 +15,7 @@ This portion of the website highlights the user stories acquired for the require
 7. As a patrolling officer, in the DVR player, I can manipulate video quality to get a better stream on a poor connection, and I can zoom in on different areas of the video so I can get more information about interactions (e.g. license plate numbers).
 
 ## Police Chief
+The Police Chief can do everything that the Police Officer can do, plus the following:
 1. As a police chief, I can view all videos in a web DVR offering for all incidents in my domain (i.e. from all officer feeds) so that I can evaluate the performance of each officer in my group.
 2. As a police chief, I can view and filter all live streams and recorded videos from all officers so I can look at old recordings as well as observe and impact live interactions by my team in the field.
 3. As a police chief, I can look at the videos flagged by all of my officers during the day and tell what interactions the officers thought were most important coming out of the day.
