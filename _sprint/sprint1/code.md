@@ -15,10 +15,11 @@ Python 2.7 is required for running 360ls-stitcher.
 You can get find the release for a specific platform [here](https://www.python.org/downloads/release/python-2712/).
 
 ## Install 360ls-stitcher
-First clone the 360ls-stitcher repo.
+First clone the 360ls-stitcher repo and checkout the results/sprint1 branch.
 
 ```bash
 git clone https://github.com/dongy7/360ls-stitcher.git
+git checkout origin/results/sprint1
 ```
 
 Install the dependencies:
