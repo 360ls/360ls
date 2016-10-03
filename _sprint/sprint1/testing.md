@@ -3,7 +3,7 @@ layout: page
 title: Test Plan
 ---
 
-##Ideal Plan
+## Ideal Plan
 
 - Unit Tests:
   - Use unit tests to systematically measure the functionality of the python stitching script.
