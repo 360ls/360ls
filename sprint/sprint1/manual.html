@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>360 Life Stream :: Executable Code and Instructions</title>
-    <meta name="description" content="Install OpenCV360ls-stitcher requires OpenCV to be installed. Listed below are instructions for installing OpenCVfor various platforms.  Linux  Windows  OSX">
+    <title>360 Life Stream :: User Manual</title>
+    <meta name="description" content="">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
-    <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/code">
+    <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint1/manual">
     <link rel="alternate" type="application/rss+xml" title="360 Life Stream" href="http://dongy7.github.io/360ls/feed.xml" />
 
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
@@ -124,32 +124,27 @@
             <ul class="sub-menu">
             
                 
-                    <li><a href="/360ls/sprint/specification">Functional Specification</a></li>
-                
+                    <li>
+                        <a href="/360ls/sprint/sprint1">Sprint 1</a>
+                        <ul class="sub-menu">
+                            
+                            <li><a href="/360ls/sprint/sprint1/specification">Functional Specification</a><li>
+                            
+                            <li><a href="/360ls/sprint/sprint1/design">Design Doc</a><li>
+                            
+                            <li><a href="/360ls/sprint/sprint1/testing">Test Plan</a><li>
+                            
+                            <li><a href="/360ls/sprint/sprint1/manual">User Manual</a><li>
+                            
+                            <li><a href="/360ls/sprint/sprint1/code">Executable Code and Instructions</a><li>
+                            
+                        </ul>
                     </li>
-            
-                
-                    <li><a href="/360ls/sprint/design">Design Doc</a></li>
-                
-                    </li>
-            
-                
-                    <li><a href="/360ls/sprint/testing">Test Plan</a></li>
-                
-                    </li>
-            
-                
-                    <li><a href="/360ls/sprint/manual">User Manual</a></li>
                 
                     </li>
             
                 
                     <li><a href="/360ls/sprint/repository">Version-Controlled Repository</a></li>
-                
-                    </li>
-            
-                
-                    <li><a href="/360ls/sprint/code">Executable Code and Instructions</a></li>
                 
                     </li>
             
@@ -166,56 +161,10 @@
 
     <div class="post">
     <header class="post-header">
-        <h1>Executable Code and Instructions</h1>
+        <h1>User Manual</h1>
     </header>
 
-    <h2 id="install-opencv">Install OpenCV</h2>
-<p>360ls-stitcher requires <code class="highlighter-rouge">OpenCV</code> to be installed. 
-Listed below are instructions for installing OpenCV
-for various platforms.</p>
-<ul>
-  <li><a href="http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html">Linux</a></li>
-  <li><a href="http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html">Windows</a></li>
-  <li><a href="http://www.mobileway.net/2015/02/14/install-opencv-for-python-on-mac-os-x/">OSX</a></li>
-</ul>
-
-<h2 id="install-python">Install Python</h2>
-<p>Python 2.7 is required for running 360ls-stitcher.
-You can get find the release for a specific platform <a href="https://www.python.org/downloads/release/python-2712/">here</a>.</p>
-
-<h2 id="install-360ls-stitcher">Install 360ls-stitcher</h2>
-<p>First clone the 360ls-stitcher repo.</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/dongy7/360ls-stitcher.git
-</code></pre>
-</div>
-
-<p>Install the dependencies:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make install
-</code></pre>
-</div>
-
-<h2 id="generating-a-user-profile">Generating a user profile</h2>
-<p>360ls-stitcher requires a configuration file called a profile. In order to create one,
-run the following command:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make configure
-</code></pre>
-</div>
-
-<p>Follow the instructions and fill in the requested information. The
-resulting profile will be stored as a <em>YML</em> file at <code class="highlighter-rouge">config/profile.yml</code>.</p>
-
-<h2 id="starting-360ls-stitcher">Starting 360ls-stitcher</h2>
-<p>After a profile has been generated, run the following command to start 360ls-stitcher:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>make run
-</code></pre>
-</div>
-
-<p>This will bring up a command line interface with options to stitch videos coming
-from USB cameras or to stitch static videos.</p>
+    
 
 </div>
 
