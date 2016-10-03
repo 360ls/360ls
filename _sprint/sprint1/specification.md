@@ -71,6 +71,8 @@ After completion of Sprint 1, we were able to complete the following requirement
 Though we did not originally target completion of any of the interfaces affiliated with the completion of our app during this specific sprint, we did in fact develop a CLI for easy navigation through and interaction with our stitching application. An example progression of that cli can be seen below. This CLI would be used by anyone who wanted to test or run the existing stitcher code.
 
 ![Stitcher CLI](../../images/Sprint1CLI.png)
+![Stitcher CLI GIF](../../images/Sprint1CLI.gif)
+
 
 
 
