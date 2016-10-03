@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>360 Life Stream :: Functional Specification</title>
-    <meta name="description" content="">
+    <title>360 Life Stream :: Functional Specification - Sprint 1</title>
+    <meta name="description" content="This portion of the website highlights the functional specification for the first development sprint. This functional specification includes use cases, requi...">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint1/specification">
@@ -161,10 +161,38 @@
 
     <div class="post">
     <header class="post-header">
-        <h1>Functional Specification</h1>
+        <h1>Functional Specification - Sprint 1</h1>
     </header>
 
-    
+    <p>This portion of the website highlights the functional specification for the first development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint.</p>
+
+<h1 id="use-cases">Use Cases</h1>
+
+<h2 id="use-cases-targeted">Use Cases Targeted</h2>
+
+<h3 id="on-box-application">On-box Application</h3>
+<ul>
+  <li>Display a Stitched Video (use case of program to enable watching live video)
+    <ul>
+      <li>Take video input from four camera streams and stitch it into one video</li>
+      <li>Convert that stitched video into multiple encodings of a 360 degree video</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="use-cases-achieved">Use Cases Achieved</h2>
+<ul>
+  <li>Display a Stitched Video (use case of program to enable watching live video)
+    <ul>
+      <li>Take video input from two camera streams and stitch it into one 360 degree video</li>
+      <li>Output that stitched video to a socket for RTMP data stream consumption</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="summary-of-use-case-fulfillment">Summary of Use Case Fulfillment</h2>
+<p>During Sprint 1, we sought to develop a functioning stitching script that would read in input from 4 cameras and save a video file to local disk. We did not intend 100% accuracy of stitching or necesarily robust implementation, but we wanted an MVP to make sure that the stitching aspect of our project, the most crucial part, was in fact possible and implementable in the time that we have alotted for the semester.</p>
+
 
 </div>
 
