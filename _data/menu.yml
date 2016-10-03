@@ -33,20 +33,20 @@
               subhref: "/requirements/functionalspec/interfaces"
       - subtitle: "Prototype"
         subhref: "/requirements/prototype"
-      
-      
-
 - title: "Sprint Deliverables"
   subcategories:
-      - subtitle: "Functional Specification"
-        subhref: "/sprint/specification"
-      - subtitle: "Design Doc"
-        subhref: "/sprint/design"
-      - subtitle: "Test Plan"
-        subhref: "/sprint/testing"
-      - subtitle: "User Manual"
-        subhref: "/sprint/manual"
+      - subtitle: "Sprint 1"
+        subhref: "/sprint/sprint1"
+        children:
+            - subtitle: "Functional Specification"
+              subhref: "/sprint/sprint1/specification"
+            - subtitle: "Design Doc"
+              subhref: "/sprint/sprint1/design"
+            - subtitle: "Test Plan"
+              subhref: "/sprint/sprint1/testing"
+            - subtitle: "User Manual"
+              subhref: "/sprint/sprint1/manual"
+            - subtitle: "Executable Code and Instructions"
+              subhref: "/sprint/sprint1/code"
       - subtitle: "Version-Controlled Repository"
         subhref: "/sprint/repository"
-      - subtitle: "Executable Code and Instructions"
-        subhref: "/sprint/code"
