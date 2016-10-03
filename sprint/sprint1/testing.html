@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>360 Life Stream :: Test Plan</title>
-    <meta name="description" content="">
+    <meta name="description" content="##Ideal Plan">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint1/testing">
@@ -164,7 +164,68 @@
         <h1>Test Plan</h1>
     </header>
 
-    
+    <p>##Ideal Plan</p>
+
+<ul>
+  <li>Unit Tests:
+    <ul>
+      <li>Use unit tests to systematically measure the functionality of the python stitching script.</li>
+      <li>Unit test the homography matrix with different image sets.</li>
+      <li>Unit test the keypoint detection for individual images of different brightness, size, etc.</li>
+      <li>Unit test the keypoint matching between multiple images.</li>
+      <li>Unit test the output frames of the stitching script with different image sizes to see the accuracy of the stitching</li>
+      <li>Unit test the configuration using streams of different quality, sizes, and on different systems.</li>
+      <li>Unit test the rtmp connection to a server</li>
+      <li>Unit test the encoding of videos of different sizes and qualities</li>
+    </ul>
+  </li>
+  <li>Integration Tests:
+    <ul>
+      <li>Test the connections between the driver file (run.py) and the stitching module (panorama.py)</li>
+      <li>Test the system with different numbers of cameras</li>
+      <li>Test with still images, video files, and video streams.</li>
+      <li>Test the connection between the RTMP stream and the stitching script</li>
+    </ul>
+  </li>
+  <li>Acceptance Tests:
+    <ul>
+      <li>Look at the full output videos of stitched streams and test the quality</li>
+      <li>Does the script take 4 video streams, create a homography matrix by matching key points, and stitching 4 streams together?</li>
+      <li>Does the python script take a stitched video and stream it over RTMP to a server?</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="actual-plan">Actual Plan</h2>
+
+<ul>
+  <li>Configuration Tests:
+    <ul>
+      <li>Script should be able to initialize 4 video streams</li>
+      <li>Test that all video streams are visible and without errors</li>
+    </ul>
+  </li>
+  <li>Stitching Tests:
+    <ul>
+      <li>Use different sets of mp4 video files to stitch together and examine the output.</li>
+      <li>Look for missing video streams, stitching errors, warping, and poor resolution.</li>
+    </ul>
+  </li>
+  <li>Encoding Tests:
+    <ul>
+      <li>Check that an RTMP stream can be established to a server</li>
+      <li>Test sending video files over RTMP stream to Wowza server</li>
+      <li>Check encoding to ensure that correct parameters were provided and quality was maintained on the video files</li>
+    </ul>
+  </li>
+  <li>Integration Tests:
+    <ul>
+      <li>Test the connection between video streams and stitching script. Ensure that all streams are inputting properly</li>
+      <li>Test the connection between the stitching script and the encoding process. The stitched video stream should be encoded and sent over an RTMP server.</li>
+    </ul>
+  </li>
+</ul>
+
 
 </div>
 
