@@ -11,7 +11,7 @@ This website is built using [Jekyll](https://jekyllrb.com/). The `jgd` gem is us
 ## Running Locally
 `jekyll serve`
 
-Head over to http://localhost:4000/360/ls in your browser.
+Head over to http://127.0.0.1:4000/360ls/ in your browser.
 
 ## Deploying to Github Pages
 Commit the local changes and push to the master branch.
