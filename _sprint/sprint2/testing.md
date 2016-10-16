@@ -7,24 +7,25 @@ title: Test Plan
 
 - Unit Tests:
   - Use unit tests to systematically measure the functionality of the python stitching script.
-  - Unit test the homography matrix with different image sets.
-  - Unit test the keypoint detection for individual images of different brightness, size, etc.
-  - Unit test the keypoint matching between multiple images.
-  - Unit test the output frames of the stitching script with different image sizes to see the accuracy of the stitching
+  - Unit test the barrel distortion fixes that we made this sprint. Can we correctly calibrate the videos to reduce fish eye and barrel distortion?
+  - Unit test the remapping of the calibrated images
+  - Unit test the efficiency of the stitching algorithm. Are we stitching quickly enough to establish a true live stream.
+  - Unit test the speed of the encoding. Is ffmpeg reading and encoding at a rate that is acceptable to produce a smooth live stream?
+  - Unit test calibration of 4 live camera feeds.
   - Unit test the configuration using streams of different quality, sizes, and on different systems.
-  - Unit test the rtmp connection to a server
-  - Unit test the encoding of videos of different sizes and qualities
+  - Unit test the rtmp connection to the AWS hosted Wowza server
+  - Unit test playing a video on our web app
 
 - Integration Tests:
-  - Test the connections between the driver file (run.py) and the stitching module (panorama.py)
-  - Test the system with different numbers of cameras
-  - Test with still images, video files, and video streams.
-  - Test the connection between the RTMP stream and the stitching script
+  - Test the piping of images from python stitching module to the ffmpeg encoding. Do the output images from the stitching get correctly piped from our module to the ffmpeg rtmp stream?
+  - Test the configuration of 4 live camera streams into our stitching module. Can the stitching script produce a video of 4 cameras stitched together?
+  - Test the connection between AWS wowza server and our web app. Can we receive a live stream video onto our Django/Python app?
+  
 
 - Acceptance Tests:
-  - Look at the full output videos of stitched streams and test the quality
-  - Does the script take 4 video streams, create a homography matrix by matching key points, and stitching 4 streams together?
-  - Does the python script take a stitched video and stream it over RTMP to a server?
+  - Test viewing an output video from 4 live cameras stitched together. Look for things like low quality, lagging, warped around the sides, misalignment.
+  - Test the live streaming from 4 cameras. Test for discoloration, lagging, jumpiness, buffering, etc.
+- Final Test: Does the app take 4 live inputs, stitch them together, stream them over rtmp to wowza server, and push to a player on our web app where we can view the stream?
 
 
 ## Actual Plan
@@ -34,15 +35,22 @@ title: Test Plan
   - Test that all video streams are visible and without errors
 
 - Stitching Tests:
-  - Use different sets of mp4 video files to stitch together and examine the output.
+  - Use 4 video streams to test the quality of the stitching.
   - Look for missing video streams, stitching errors, warping, and poor resolution.
+  - Test the efficiency of the stitching, is there lagging, jumpiness, etc.?
+  - Test the barrel distortion correction fixes that we made this sprint.
 
 - Encoding Tests:
   - Check that an RTMP stream can be established to a server
   - Test sending video files over RTMP stream to Wowza server
-  - Check encoding to ensure that correct parameters were provided and quality was maintained on the video files
+  - Test sending a live stream video over RTMP to wowza server
+
+- Streaming Tests: 
+  - Test viewing a live streamed video on the Wowza server.
+  - Look for errors like laggin, jumping, discoloration, buffering, etc.
+  - Test viewing a video on the web app
+  - Test viewing a live stream video pushed from the Wowza server to the web app
 
 - Integration Tests:
-  - Test the connection between video streams and stitching script. Ensure that all streams are inputting properly
-  - Test the connection between the stitching script and the encoding process. The stitched video stream should be encoded and sent over an RTMP server.
+  - Test taking 4 live streams, stitch them together, pipe the output to ffmpeg, encode these frames into rtmp, push this stream to a wowza server, and view the live stream on our web app. 
   
