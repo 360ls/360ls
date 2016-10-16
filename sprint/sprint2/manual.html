@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>360 Life Stream :: Journal</title>
-    <meta name="description" content="Summary of meetings.">
+    <title>360 Life Stream :: Manuals</title>
+    <meta name="description" content="These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 1, not the entire finished product...">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
-    <link rel="canonical" href="http://dongy7.github.io/360ls/general/journal">
+    <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint2/manual">
     <link rel="alternate" type="application/rss+xml" title="360 Life Stream" href="http://dongy7.github.io/360ls/feed.xml" />
 
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
@@ -181,53 +181,101 @@
 
     <div class="post">
     <header class="post-header">
-        <h1>Journal</h1>
+        <h1>Manuals</h1>
     </header>
 
-    <p>Summary of meetings.</p>
+    <p>These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 1, not the entire finished product</p>
+<h2 id="user-manual">User Manual</h2>
+<h3 id="stitching">Stitching</h3>
 
-<ul class="listing">
-
-  
-  
-    
-    <li class="listing-seperator">2016</li>
-  
-  <li class="listing-item">
-    <time datetime="2016-09-23">2016-09-23</time>
-    <a href="/360ls/blog/2016/09/23/client-meeting-4" title="Client Meeting #4">Client Meeting #4</a>
+<ul>
+  <li>Prerequisites:
+    <ol>
+      <li>Python 2.7</li>
+      <li>Opencv 2.4 python library</li>
+      <li>2+ USB cameras</li>
+    </ol>
   </li>
-
-  
-  
-  <li class="listing-item">
-    <time datetime="2016-09-16">2016-09-16</time>
-    <a href="/360ls/blog/2016/09/16/client-meeting-3" title="Client Meeting #3">Client Meeting #3</a>
+  <li>Set up:
+    <ol>
+      <li>Install the dependencies by running the command: make install</li>
+      <li>Generate the setup profile by running the command: make configure</li>
+      <li>Follow the command line prompt to establish all configuration settings on your machine</li>
+      <li>Put all images in the directory “data/sources” and all videos in “data/video”</li>
+      <li>Attach cameras to USB ports on your machine</li>
+      <li>Run the following command to finish the configuration setup: make run</li>
+    </ol>
   </li>
-
-  
-  
-  <li class="listing-item">
-    <time datetime="2016-09-09">2016-09-09</time>
-    <a href="/360ls/blog/2016/09/09/client-meeting-2" title="Client Meeting #2">Client Meeting #2</a>
+  <li>Running:
+    <ol>
+      <li>Follow the command line prompt to either stitch videos from cameras, stitch local images, stitch local videos</li>
+      <li>The script with begin and the frames will be outputted to an opencv window where they can be viewed</li>
+    </ol>
   </li>
-
-  
-  
-  <li class="listing-item">
-    <time datetime="2016-09-07">2016-09-07</time>
-    <a href="/360ls/blog/2016/09/07/team-meeting-1" title="Team Meeting #1">Team Meeting #1</a>
+  <li>Troubleshooting:
+    <ul>
+      <li>Make sure video and image files are in the correct folder listed above in the set up section. If not, then they will not be found by the script.</li>
+      <li>Check your USB port numbers when you are making the configuration file, make sure that the port number corresponds to the stream coming in.</li>
+      <li>When filming, make sure the cameras are level and have significant overlap in their field of view. If not, then the script will not be able to stitch the two streams properly.</li>
+    </ul>
   </li>
-
-  
-  
-  <li class="listing-item">
-    <time datetime="2016-09-02">2016-09-02</time>
-    <a href="/360ls/blog/2016/09/02/client-meeting-1" title="Client Meeting #1">Client Meeting #1</a>
-  </li>
-
 </ul>
-<p>–</p>
+
+<h3 id="streaming">Streaming</h3>
+
+<ul>
+  <li>Prerequisites:
+    <ol>
+      <li>All components of a working stitching script as documented above</li>
+      <li>A Wowza cloud streaming engine server</li>
+      <li>FFmpeg 3.1.4 software package for Python</li>
+    </ol>
+  </li>
+  <li>Set up:
+    <ol>
+      <li>Make sure the port number is configured in profile.yml</li>
+      <li>Run the command: make client</li>
+      <li>This will stream to a local port where client.py is listening to the incoming stream. This will later transform into the Wowza server listening to the stream</li>
+    </ol>
+  </li>
+  <li>Uploading to Wowza:
+    <ol>
+      <li>Right now we can only support uploading to Wowza from a static mp4 file or an unstitched stream.</li>
+      <li>Make sure you have a Wowza server up and running with a new application that can take live stream (see Admin manual to set this up)</li>
+      <li>Run the following command from the root directory of the stitching repository: ffmpeg -re -i data/videos/cam1.mp4 -c copy -f flv rtmp://localhost:1935/live-test/myStream</li>
+      <li>Go to the Wowza streaming engine manager (http://localhost:1935/enginemanager) and click on the application “live-test”.</li>
+      <li>Click incoming streams on the left tab bar and select “myStream”.</li>
+      <li>Then click “Test Player” to see the static video being streamed to the Wowza server</li>
+    </ol>
+  </li>
+</ul>
+
+<h1 id="administrator-manual">Administrator Manual</h1>
+
+<h3 id="stitching-1">Stitching</h3>
+
+<ul>
+  <li>Documentation:
+    <ul>
+      <li>Run the following command to generate documentation: make html</li>
+      <li>Run the following command to lint the code: make lint</li>
+      <li>Run the following command to test the code: make test</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="streaming-1">Streaming</h3>
+
+<ul>
+  <li>Set up:
+    <ol>
+      <li>Set up Wowza streaming engine by downloading free trial from the Wowza website and follow online installation instructions</li>
+      <li>Go to the Wowza engine manager web interface and create a new application called “live-test”</li>
+      <li>Now you should be able to send and receive live streams at this port.</li>
+    </ol>
+  </li>
+</ul>
+
 
 </div>
 
