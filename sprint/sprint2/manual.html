@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>360 Life Stream :: Manuals</title>
-    <meta name="description" content="These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 1, not the entire finished product...">
+    <meta name="description" content="These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 2, not the entire finished product...">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint2/manual">
@@ -184,9 +184,8 @@
         <h1>Manuals</h1>
     </header>
 
-    <p>These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 1, not the entire finished product</p>
+    <p>These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 2, not the entire finished product</p>
 <h2 id="user-manual">User Manual</h2>
-<h3 id="stitching">Stitching</h3>
 
 <ul>
   <li>Prerequisites:
@@ -194,6 +193,8 @@
       <li>Python 2.7</li>
       <li>Opencv 2.4 python library</li>
       <li>2+ USB cameras</li>
+      <li>Wowza cloud streaming engine server</li>
+      <li>FFmpeg 3.1.4 software package for Python installed</li>
     </ol>
   </li>
   <li>Set up:
@@ -207,52 +208,40 @@
     </ol>
   </li>
   <li>Running:
-    <ol>
-      <li>Follow the command line prompt to either stitch videos from cameras, stitch local images, stitch local videos</li>
-      <li>The script with begin and the frames will be outputted to an opencv window where they can be viewed</li>
-    </ol>
+    <ul>
+      <li>Follow the command line prompt to either stitch videos from cameras, stitch local images, stitch local videos, stream stitched videos, check streams, or preview streams
+        <ul>
+          <li>Stitch videos from cameras will take in streams, compute a homography and stitch frames together where they will be displayed in an opencv window</li>
+          <li>Stitch local images will take specified image files, compute a homography, stitch them together, and output the result as a static image in a new window.</li>
+          <li>Stitch local videos will take configured video files, compute a homography, stitch frames together and output the result to a new windo for viewing.</li>
+          <li>Stream stitched videos will take input from camera streams, compute a homography, stitch frames together, pipe them to ffmpeg where they will be sent over an rtmp stream to our wowza server.</li>
+          <li>Check streams will tell you whether the specified camera index is valid</li>
+          <li>Preview streams will allow you to view the unaltered live feed from the specied camera index.</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li>Troubleshooting:
     <ul>
       <li>Make sure video and image files are in the correct folder listed above in the set up section. If not, then they will not be found by the script.</li>
       <li>Check your USB port numbers when you are making the configuration file, make sure that the port number corresponds to the stream coming in.</li>
       <li>When filming, make sure the cameras are level and have significant overlap in their field of view. If not, then the script will not be able to stitch the two streams properly.</li>
+      <li>Make sure you have configured the correct ordering of camera indexes, i.e. left index is really on the left</li>
     </ul>
   </li>
-</ul>
-
-<h3 id="streaming">Streaming</h3>
-
-<ul>
-  <li>Prerequisites:
+  <li>Viewing live stream on Wowza:
     <ol>
-      <li>All components of a working stitching script as documented above</li>
-      <li>A Wowza cloud streaming engine server</li>
-      <li>FFmpeg 3.1.4 software package for Python</li>
-    </ol>
-  </li>
-  <li>Set up:
-    <ol>
-      <li>Make sure the port number is configured in profile.yml</li>
-      <li>Run the command: make client</li>
-      <li>This will stream to a local port where client.py is listening to the incoming stream. This will later transform into the Wowza server listening to the stream</li>
-    </ol>
-  </li>
-  <li>Uploading to Wowza:
-    <ol>
-      <li>Right now we can only support uploading to Wowza from a static mp4 file or an unstitched stream.</li>
       <li>Make sure you have a Wowza server up and running with a new application that can take live stream (see Admin manual to set this up)</li>
-      <li>Run the following command from the root directory of the stitching repository: ffmpeg -re -i data/videos/cam1.mp4 -c copy -f flv rtmp://localhost:1935/live-test/myStream</li>
-      <li>Go to the Wowza streaming engine manager (http://localhost:1935/enginemanager) and click on the application “live-test”.</li>
+      <li>Go to the Wowza streaming engine manager (http://54.208.55.156:8088/enginemanager) and click on the application “live”.</li>
       <li>Click incoming streams on the left tab bar and select “myStream”.</li>
-      <li>Then click “Test Player” to see the static video being streamed to the Wowza server</li>
+      <li>Then click “Test Player” to see the cameras being streamed to the Wowza server</li>
     </ol>
   </li>
 </ul>
 
 <h1 id="administrator-manual">Administrator Manual</h1>
 
-<h3 id="stitching-1">Stitching</h3>
+<h3 id="stitching">Stitching</h3>
 
 <ul>
   <li>Documentation:
@@ -264,15 +253,15 @@
   </li>
 </ul>
 
-<h3 id="streaming-1">Streaming</h3>
+<h3 id="streaming">Streaming</h3>
 
 <ul>
-  <li>Set up:
-    <ol>
-      <li>Set up Wowza streaming engine by downloading free trial from the Wowza website and follow online installation instructions</li>
-      <li>Go to the Wowza engine manager web interface and create a new application called “live-test”</li>
-      <li>Now you should be able to send and receive live streams at this port.</li>
-    </ol>
+  <li>Wowza:
+    <ul>
+      <li>We have set up a Wowza streaming engine free trial on an AWS server. To gain administrative rights please contact us directly (we don’t want to put secure passwords on the web).</li>
+      <li>To set up a new live application go to the “Applications” tab on the top of the engine manager page. Click the tab on the left that says “Add Application” and follow the prompts to configure settings.</li>
+      <li>Right now we have our Application configured to accept any rtmp stream, and you can change these settings in the tab that says “Source Security”</li>
+    </ul>
   </li>
 </ul>
 
