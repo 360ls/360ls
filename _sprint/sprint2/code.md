@@ -15,11 +15,10 @@ Python 2.7 is required for running 360ls-stitcher.
 You can get find the release for a specific platform [here](https://www.python.org/downloads/release/python-2712/).
 
 ## Install 360ls-stitcher
-First clone the 360ls-stitcher repo and checkout the results/sprint1 branch.
+First clone the 360ls-stitcher repo.
 
 ```bash
 git clone https://github.com/dongy7/360ls-stitcher.git
-git checkout origin/results/sprint1
 ```
 
 Install the dependencies:
@@ -47,4 +46,14 @@ make run
 ```
 
 This will bring up a command line interface with options to stitch videos coming
-from USB cameras or to stitch static videos. 
+from USB cameras or to stitch static videos. The profile can also be reconfigured
+through the interface. 
+
+## Running Non-Interactively
+
+To run non-interactively, add the `-n` flag and pass the desired option number to 
+the `--option` argument. For example, to switch two videos, run the following command:
+
+```bash
+python -m sticher.app -n --option 3
+```
