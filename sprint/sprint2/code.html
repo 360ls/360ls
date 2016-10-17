@@ -199,10 +199,9 @@ for various platforms.</p>
 You can get find the release for a specific platform <a href="https://www.python.org/downloads/release/python-2712/">here</a>.</p>
 
 <h2 id="install-360ls-stitcher">Install 360ls-stitcher</h2>
-<p>First clone the 360ls-stitcher repo and checkout the results/sprint1 branch.</p>
+<p>First clone the 360ls-stitcher repo.</p>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/dongy7/360ls-stitcher.git
-git checkout origin/results/sprint1
 </code></pre>
 </div>
 
@@ -231,7 +230,17 @@ resulting profile will be stored as a <em>YML</em> file at <code class="highligh
 </div>
 
 <p>This will bring up a command line interface with options to stitch videos coming
-from USB cameras or to stitch static videos.</p>
+from USB cameras or to stitch static videos. The profile can also be reconfigured
+through the interface.</p>
+
+<h2 id="running-non-interactively">Running Non-Interactively</h2>
+
+<p>To run non-interactively, add the <code class="highlighter-rouge">-n</code> flag and pass the desired option number to 
+the <code class="highlighter-rouge">--option</code> argument. For example, to switch two videos, run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>python -m sticher.app -n --option 3
+</code></pre>
+</div>
 
 </div>
 
