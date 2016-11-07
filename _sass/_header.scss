@@ -59,6 +59,12 @@
     border-color: $line-color;
     z-index:2147483647;
 }
+.site-nav .sub-menu .sub-menu{
+    border-color: $line-color;
+    z-index:2147483647;
+    left: 187px;
+    top: -1px;
+}
 .site-nav .sub-menu li.current-menu-item > a {
     border-left: none;
     border-right: none;
