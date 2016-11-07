@@ -36,7 +36,7 @@
 - title: "Sprint Deliverables"
   subcategories:
       - subtitle: "Sprint 1"
-        subhref: "/sprint/sprint1"
+        subhref: "/sprint/sprint1.html"
         children:
             - subtitle: "Functional Specification"
               subhref: "/sprint/sprint1/specification"
@@ -49,7 +49,7 @@
             - subtitle: "Executable Code and Instructions"
               subhref: "/sprint/sprint1/code"
       - subtitle: "Sprint 2"
-        subhref: "/sprint/sprint2"
+        subhref: "/sprint/sprint2.html"
         children:
             - subtitle: "Functional Specification"
               subhref: "/sprint/sprint2/specification"
@@ -61,5 +61,18 @@
               subhref: "/sprint/sprint2/manual"
             - subtitle: "Executable Code and Instructions"
               subhref: "/sprint/sprint2/code"
+      - subtitle: "Sprint 3"
+        subhref: "/sprint/sprint3.html"
+        children:
+            - subtitle: "Functional Specification"
+              subhref: "/sprint/sprint3/specification"
+            - subtitle: "Design Doc"
+              subhref: "/sprint/sprint3/design"
+            - subtitle: "Test Plan"
+              subhref: "/sprint/sprint3/testing"
+            - subtitle: "User Manual"
+              subhref: "/sprint/sprint3/manual"
+            - subtitle: "Executable Code and Instructions"
+              subhref: "/sprint/sprint3/code"
       - subtitle: "Version-Controlled Repository"
         subhref: "/sprint/repository"
