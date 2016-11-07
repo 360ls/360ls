@@ -221,9 +221,113 @@ for various platforms.</p>
 You can get find the release for a specific platform <a href="https://www.python.org/downloads/release/python-2712/">here</a>.</p>
 
 <h3 id="clone-the-stitch-flex-repository">Clone the stitch-flex repository</h3>
-<p>…more to be added soon…</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/360ls/stitch-flex.git
+</code></pre>
+</div>
+
+<h3 id="to-install-the-package">To install the package:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>stitch-flex
+git checkout origin checkpoint/sprint3
+make clean-install
+</code></pre>
+</div>
+
+<p>This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.</p>
+
+<h3 id="then-to-run-the-app-either">Then, to run the app, either:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make run
+</code></pre>
+</div>
+<p>to simply run the app</p>
+
+<p>OR</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make
+</code></pre>
+</div>
+
+<p>to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.</p>
+
+<h3 id="to-run-the-cli-which-provides-the-most-functionality">To run the cli, which provides the most functionality.:</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make cli
+</code></pre>
+</div>
+
+<h3 id="to-set-up-the-camera-streams">To set up the camera streams</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make camera-setup
+</code></pre>
+</div>
+
+<h3 id="to-demonstrate-threading-through-taking-snapshots">To demonstrate threading through taking snapshots</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make snap
+</code></pre>
+</div>
+
+<h3 id="to-lint-the-application">To lint the application:</h3>
+
+<p>For JS files:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>eslint nameoffile.js
+</code></pre>
+</div>
+
+<p>For Python files;</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make lint-py
+</code></pre>
+</div>
+
+<h3 id="to-run-tests-against-the-application">To run tests against the application:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make <span class="nb">test</span>
+</code></pre>
+</div>
+
+<hr />
 
 <h2 id="for-the-most-up-to-date-desktop-interface-functionality">For the most up-to-date desktop interface functionality:</h2>
+
+<p>For package management, we use the <a href="https://yarnpkg.com/">Yarn</a> package manger.</p>
+
+<h3 id="to-install-yarn-and-install-dependencies">To Install Yarn and Install dependencies:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>npm install -g yarn
+yarn install
+</code></pre>
+</div>
+
+<h3 id="to-run-the-application">To run the application:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn run dev
+</code></pre>
+</div>
+
+<p>This will start up the build server that bundles the application
+with <a href="https://webpack.github.io/">webpack</a> and open up the
+electron application.</p>
+
+<h3 id="linting">Linting</h3>
+
+<p><a href="http://eslint.org/">ESlint</a> is used to lint <code class="highlighter-rouge">js</code>/<code class="highlighter-rouge">jsx</code> files under the
+<code class="highlighter-rouge">app</code> and <code class="highlighter-rouge">test</code> directories using the <code class="highlighter-rouge">React</code> style guide from
+<a href="https://github.com/airbnb/javascript/blob/master/react/README.md">Airbnb</a>.</p>
+
+<p>To lint run the following command:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn lint
+</code></pre>
+</div>
+
+<h2 id="testing">Testing</h2>
+
+<p>Tests are run using the <a href="https://facebook.github.io/jest/">Jest</a> framework.
+The following command will run the test suite defined under the <code class="highlighter-rouge">test</code>
+directory.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn <span class="nb">test</span>
+</code></pre>
+</div>
 
 </div>
 
