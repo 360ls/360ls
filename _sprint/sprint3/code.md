@@ -3,7 +3,25 @@ layout: page
 title: Executable Code and Instructions
 ---
 
-## For the most up-to-date stitching functionality:
+## Desktop Application
+
+You can find the latest executables [here](https://github.com/360ls/desktop/releases).
+
+### Windows
+1. Download the Windows release.
+2. Unzip the file and open the executable inside.
+
+
+### Ubuntu/Debian
+1. Download the debian release.
+2. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
+
+### MacOS
+1. Download the MacOS release.
+2. Unzip the file and open the executable inside.
+
+
+## Stitcher Application
 
 ### Install OpenCV
 360ls-stitcher requires `OpenCV` to be installed. 
@@ -84,46 +102,7 @@ make test
 
 -------
 
-## For the most up-to-date desktop interface functionality:
+## Developing and Building the Desktop Application
 
-For package management, we use the [Yarn](https://yarnpkg.com/) package manger.
-
-### To Install Yarn and Install dependencies:
-
-```bash
-npm install -g yarn
-yarn install
-```
-
-### To run the application:
-
-```bash
-yarn run dev
-```
-
-This will start up the build server that bundles the application
-with [webpack](https://webpack.github.io/) and open up the
-electron application.
-
-
-### Linting
-
-[ESlint](http://eslint.org/) is used to lint `js`/`jsx` files under the
-`app` and `test` directories using the `React` style guide from
-[Airbnb](https://github.com/airbnb/javascript/blob/master/react/README.md).
-
-To lint run the following command:
-
-```bash
-yarn lint
-```
-
-## Testing
-
-Tests are run using the [Jest](https://facebook.github.io/jest/) framework.
-The following command will run the test suite defined under the `test`
-directory.
-
-```bash
-yarn test
-```
+You can find the instructions for setting up a developer
+environment for the desktop application [here](https://github.com/360ls/desktop/blob/master/README.md).
