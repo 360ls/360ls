@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>360 Life Stream :: Executable Code and Instructions</title>
-    <meta name="description" content="For the most up-to-date stitching functionality:">
+    <meta name="description" content="Desktop Application">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint3/code">
@@ -204,7 +204,29 @@
         <h1>Executable Code and Instructions</h1>
     </header>
 
-    <h2 id="for-the-most-up-to-date-stitching-functionality">For the most up-to-date stitching functionality:</h2>
+    <h2 id="desktop-application">Desktop Application</h2>
+
+<p>You can find the latest executables <a href="https://github.com/360ls/desktop/releases">here</a>.</p>
+
+<h3 id="windows">Windows</h3>
+<ol>
+  <li>Download the Windows release.</li>
+  <li>Unzip the file and open the executable inside.</li>
+</ol>
+
+<h3 id="ubuntudebian">Ubuntu/Debian</h3>
+<ol>
+  <li>Download the debian release.</li>
+  <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
+</ol>
+
+<h3 id="macos">MacOS</h3>
+<ol>
+  <li>Download the MacOS release.</li>
+  <li>Unzip the file and open the executable inside.</li>
+</ol>
+
+<h2 id="stitcher-application">Stitcher Application</h2>
 
 <h3 id="install-opencv">Install OpenCV</h3>
 <p>360ls-stitcher requires <code class="highlighter-rouge">OpenCV</code> to be installed. 
@@ -286,48 +308,10 @@ make clean-install
 
 <hr />
 
-<h2 id="for-the-most-up-to-date-desktop-interface-functionality">For the most up-to-date desktop interface functionality:</h2>
+<h2 id="developing-and-building-the-desktop-application">Developing and Building the Desktop Application</h2>
 
-<p>For package management, we use the <a href="https://yarnpkg.com/">Yarn</a> package manger.</p>
-
-<h3 id="to-install-yarn-and-install-dependencies">To Install Yarn and Install dependencies:</h3>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>npm install -g yarn
-yarn install
-</code></pre>
-</div>
-
-<h3 id="to-run-the-application">To run the application:</h3>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn run dev
-</code></pre>
-</div>
-
-<p>This will start up the build server that bundles the application
-with <a href="https://webpack.github.io/">webpack</a> and open up the
-electron application.</p>
-
-<h3 id="linting">Linting</h3>
-
-<p><a href="http://eslint.org/">ESlint</a> is used to lint <code class="highlighter-rouge">js</code>/<code class="highlighter-rouge">jsx</code> files under the
-<code class="highlighter-rouge">app</code> and <code class="highlighter-rouge">test</code> directories using the <code class="highlighter-rouge">React</code> style guide from
-<a href="https://github.com/airbnb/javascript/blob/master/react/README.md">Airbnb</a>.</p>
-
-<p>To lint run the following command:</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn lint
-</code></pre>
-</div>
-
-<h2 id="testing">Testing</h2>
-
-<p>Tests are run using the <a href="https://facebook.github.io/jest/">Jest</a> framework.
-The following command will run the test suite defined under the <code class="highlighter-rouge">test</code>
-directory.</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yarn <span class="nb">test</span>
-</code></pre>
-</div>
+<p>You can find the instructions for setting up a developer
+environment for the desktop application <a href="https://github.com/360ls/desktop/blob/master/README.md">here</a>.</p>
 
 </div>
 
