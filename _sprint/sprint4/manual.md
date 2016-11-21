@@ -60,4 +60,9 @@ These manuals are operating under the assumption that the users and administrato
   - We have set up a Wowza streaming engine free trial on an AWS server. To gain administrative rights please contact us directly (we don't want to put secure passwords on the web).
   - To set up a new live application go to the "Applications" tab on the top of the engine manager page. Click the tab on the left that says "Add Application" and follow the prompts to configure settings.
   - Right now we have our Application configured to accept any rtmp stream, and you can change these settings in the tab that says "Source Security"
+  - Here (https://docs.google.com/document/d/1P3ktqEnJgV6XPH9jGXVkZrj0uZQlp852OA8L4wnukl0/edit) is a link to our documentation on accessing the Wowza Streaming Engine over SSH. This is needed to start and stop the app as well as configure both the AWS instance and the Wowza instance.
+  
+### File Storage
+- AWS S3:
+  - Here (https://docs.google.com/document/d/1ap1i3Up0t6JJovi1SbXU570-4pcEgIIDbZy8u_Et4z0/edit) is a link that shows how to set up your development environment to work with our development bucket on S3 so you can develop against it.
   
