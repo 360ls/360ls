@@ -3,9 +3,12 @@ layout: page
 title: Manuals
 ---
 
-
 These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 4, not the entire finished product
 ## User Manual
+
+For setting up the required software on the Jetson TX1, use our provisioning [scripts](https://github.com/360ls/provision.git).
+We assume that the Jetson has been provisioned and set up properly in the
+following steps.
 
 - Prerequisites:
   1. Python 2.7
@@ -26,23 +29,21 @@ These manuals are operating under the assumption that the users and administrato
 - Set up (Web Application):
     1. Navigate to our web application after you streamed a video to see it playing live [here](https://vcms.herokuapp.com/player)
 
-
-
 - Set up (Stitching Application):
     1. Make sure you have the correct versions of OpenCV and Python installed.
     2. Clone the stitch-flex repository by running the command:
-    `bash
-    git clone https://github.com/360ls/stitch-flex.git
-    `
+```bash
+$ git clone https://github.com/360ls/stitch-flex.git
+```
 
 
   - To install the package:
 
-  `bash
-  cd stitch-flex
-  git checkout origin checkpoint/sprint3
-  make clean-install
-  `
+  ```bash
+  $ cd stitch-flex
+  $ git checkout origin checkpoint/sprint3
+  $ make clean-install
+  ```
 
   - This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.
 
@@ -55,56 +56,49 @@ These manuals are operating under the assumption that the users and administrato
   - You can then navigate to the DVR page where you will see a table of videos that have been saved.
   - Click on on of these videos and you will be taken to a player that will display the video while also providing information on the time and duration. Users will have the option to flag a video if it needs further inspection.
   - Navigate to the Preferences page to change settings of the application.
-  
+
 - Running (Stitching Application):
 
-  - To run the app, either:
+  - To run the app run the following command:
 
-  `bash
-  make run
-  `
-  - to simply run the app
-
-  OR
-
-  `bash
-  make
-  `
+    ```bash
+    $ make run
+    ```
 
   - to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.
 
   - To run the cli, which provides the most functionality.:
-  `bash
+  ```bash
   make cli
-  `
+  ```
 
   - To set up the camera streams
-  `bash
-  make camera-setup
-  `
+  ```bash
+  $ make camera-setup
+  ```
 
   - To demonstrate threading through taking snapshots
-  `bash
-  make snap
-  `
+  ```bash
+  $ make snap
+  ```
 
   - To lint the application:
 
    - For JS files:
-  `bash
-  eslint nameoffile.js
-  `
+  ```bash
+  $ eslint nameoffile.js
+  ```
 
    - For Python files;
-  `bash
-   make lint-py
-  `
+  ```bash
+   $ make lint-py
+  ```
 
   - To run tests against the application:
 
-  `bash
-  make test
-  `
+  ```bash
+  $ make test
+  ```
 
 
 - Troubleshooting:
@@ -136,7 +130,6 @@ These manuals are operating under the assumption that the users and administrato
   - To set up a new live application go to the "Applications" tab on the top of the engine manager page. Click the tab on the left that says "Add Application" and follow the prompts to configure settings.
   - Right now we have our Application configured to accept any rtmp stream, and you can change these settings in the tab that says "Source Security"
   - [Here](https://docs.google.com/document/d/1P3ktqEnJgV6XPH9jGXVkZrj0uZQlp852OA8L4wnukl0/edit) is a link to our documentation on accessing the Wowza Streaming Engine over SSH. This is needed to start and stop the app as well as configure both the AWS instance and the Wowza instance.
-  
+
 - AWS S3:
   - Here (https://docs.google.com/document/d/1ap1i3Up0t6JJovi1SbXU570-4pcEgIIDbZy8u_Et4z0/edit) is a link that shows how to set up your development environment to work with our development bucket on S3 so you can develop against it.
-  

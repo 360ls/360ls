@@ -5,35 +5,44 @@ title: Executable Code and Instructions
 
 ## Desktop Application
 
+### Hardware Setup
+
+Our application is designed to be used on the [Jetson TX1](http://www.nvidia.com/object/jetson-tx1-module.html) hardware.
+
+For our setup, we installed [Jetpack 2.1](https://developer.nvidia.com/embedded/jetpack-2_1). At the moment later versions are not supported because electron does not support ARM64 architecture currently.
+
+Pull down our [repository](https://github.com/360ls/provision.git) that contains the provisioning scripts.
+
+```bash
+$ git clone https://github.com/360ls/provision.git
+```
+
+Run the installer that will install [Ansible](https://www.ansible.com/).
+
+```bash
+$ make install
+```
+
+Run the provisioning script:
+
+```bash
+$ make provision
+```
+
+*NOTE*: This step can take up to an hour as it will compile and install
+OpenCV from the source.
+
+Finally run our setup script:
+```bash
+$ make setup
+```
 You can find the latest executables [here](https://github.com/360ls/desktop/releases).
-
-### Windows
-1. Download the Windows release.
-2. Unzip the file and open the executable inside.
-
 
 ### Ubuntu/Debian
 1. Download the debian release.
 2. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
 
-### MacOS
-1. Download the MacOS release.
-2. Unzip the file and open the executable inside.
-
-
 ## Stitcher Application
-
-### Install OpenCV
-360ls-stitcher requires `OpenCV` to be installed. 
-Listed below are instructions for installing OpenCV
-for various platforms.
-- [Linux](http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html)
-- [Windows](http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html)
-- [OSX](http://www.mobileway.net/2015/02/14/install-opencv-for-python-on-mac-os-x/)
-
-### Install Python
-Python 2.7 is required for running 360ls-stitcher.
-You can get find the release for a specific platform [here](https://www.python.org/downloads/release/python-2712/).
 
 ### Clone the stitch-flex repository
 
