@@ -96,9 +96,9 @@ $ git clone https://github.com/360ls/stitch-flex.git
 
   - To run tests against the application:
 
-  `bash
-  make test
-  `
+  ```bash
+  $ make test
+  ```
 
 
 - Troubleshooting:
