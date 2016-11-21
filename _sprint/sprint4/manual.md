@@ -29,23 +29,21 @@ following steps.
 - Set up (Web Application):
     1. Navigate to our web application after you streamed a video to see it playing live [here](https://vcms.herokuapp.com/player)
 
-
-
 - Set up (Stitching Application):
     1. Make sure you have the correct versions of OpenCV and Python installed.
     2. Clone the stitch-flex repository by running the command:
-    `bash
-    git clone https://github.com/360ls/stitch-flex.git
-    `
+```bash
+$ git clone https://github.com/360ls/stitch-flex.git
+```
 
 
   - To install the package:
 
-  `bash
-  cd stitch-flex
-  git checkout origin checkpoint/sprint3
-  make clean-install
-  `
+  ```bash
+  $ cd stitch-flex
+  $ git checkout origin checkpoint/sprint3
+  $ make clean-install
+  ```
 
   - This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.
 
@@ -61,47 +59,40 @@ following steps.
 
 - Running (Stitching Application):
 
-  - To run the app, either:
+  - To run the app run the following command:
 
-  `bash
-  make run
-  `
-  - to simply run the app
-
-  OR
-
-  `bash
-  make
-  `
+    ```bash
+    $ make run
+    ```
 
   - to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.
 
   - To run the cli, which provides the most functionality.:
-  `bash
+  ```bash
   make cli
-  `
+  ```
 
   - To set up the camera streams
-  `bash
-  make camera-setup
-  `
+  ```bash
+  $ make camera-setup
+  ```
 
   - To demonstrate threading through taking snapshots
-  `bash
-  make snap
-  `
+  ```bash
+  $ make snap
+  ```
 
   - To lint the application:
 
    - For JS files:
-  `bash
-  eslint nameoffile.js
-  `
+  ```bash
+  $ eslint nameoffile.js
+  ```
 
    - For Python files;
-  `bash
-   make lint-py
-  `
+  ```bash
+   $ make lint-py
+  ```
 
   - To run tests against the application:
 
