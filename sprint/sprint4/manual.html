@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>360 Life Stream :: Manuals</title>
-    <meta name="description" content="These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 2, not the entire finished product...">
+    <meta name="description" content="These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 4, not the entire finished product...">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint4/manual">
@@ -224,8 +224,12 @@
         <h1>Manuals</h1>
     </header>
 
-    <p>These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 2, not the entire finished product</p>
+    <p>These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 4, not the entire finished product</p>
 <h2 id="user-manual">User Manual</h2>
+
+<p>For setting up the required software on the Jetson TX1, use our provisioning <a href="https://github.com/360ls/provision.git">scripts</a>.
+We assume that the Jetson has been provisioned and set up properly in the
+following steps.</p>
 
 <ul>
   <li>Prerequisites:
@@ -235,31 +239,105 @@
       <li>2+ USB cameras</li>
       <li>Wowza cloud streaming engine server</li>
       <li>FFmpeg 3.1.4 software package for Python installed</li>
+      <li>Jetson board with Ubuntu 14.04 installed</li>
     </ol>
   </li>
-  <li>Set up:
+  <li>Set up (Desktop Application):
     <ol>
-      <li>Install the dependencies by running the command: make install</li>
-      <li>Generate the setup profile by running the command: make configure</li>
-      <li>Follow the command line prompt to establish all configuration settings on your machine</li>
-      <li>Put all images in the directory “data/sources” and all videos in “data/video”</li>
-      <li>Attach cameras to USB ports on your machine</li>
-      <li>Run the following command to finish the configuration setup: make run</li>
+      <li>Make sure all dependencies are installed on the box before you try to run the application</li>
+      <li>Download the desktop application from our github page <a href="https://github.com/360ls/desktop/releases">here</a></li>
+      <li>You can find detailed instructions on how to install and run the code <a href="https://360ls.github.io/360ls/sprint/sprint4/code">here</a></li>
+      <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
     </ol>
   </li>
-  <li>Running:
-    <ul>
-      <li>Follow the command line prompt to either stitch videos from cameras, stitch local images, stitch local videos, stream stitched videos, check streams, or preview streams
-        <ul>
-          <li>Stitch videos from cameras will take in streams, compute a homography and stitch frames together where they will be displayed in an opencv window</li>
-          <li>Stitch local images will take specified image files, compute a homography, stitch them together, and output the result as a static image in a new window.</li>
-          <li>Stitch local videos will take configured video files, compute a homography, stitch frames together and output the result to a new windo for viewing.</li>
-          <li>Stream stitched videos will take input from camera streams, compute a homography, stitch frames together, pipe them to ffmpeg where they will be sent over an rtmp stream to our wowza server.</li>
-          <li>Check streams will tell you whether the specified camera index is valid</li>
-          <li>Preview streams will allow you to view the unaltered live feed from the specied camera index.</li>
-        </ul>
+  <li>Set up (Web Application):
+    <ol>
+      <li>Navigate to our web application after you streamed a video to see it playing live <a href="https://vcms.herokuapp.com/player">here</a></li>
+    </ol>
+  </li>
+  <li>Set up (Stitching Application):
+    <ol>
+      <li>Make sure you have the correct versions of OpenCV and Python installed.</li>
+      <li>Clone the stitch-flex repository by running the command:
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/stitch-flex.git
+</code></pre>
+        </div>
       </li>
+    </ol>
+
+    <ul>
+      <li>To install the package:</li>
     </ul>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd </span>stitch-flex
+<span class="gp">$ </span>git checkout origin checkpoint/sprint3
+<span class="gp">$ </span>make clean-install
+</code></pre>
+    </div>
+
+    <ul>
+      <li>This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.</li>
+    </ul>
+  </li>
+  <li>Running (Desktop Application):
+    <ul>
+      <li>Use the tab bar in the upper left of the app to navigate between the DVR mode, Live mode, and Preferences</li>
+      <li>On the Live page you can press ‘Record’ and a live recording will start with the cameras attached to the box</li>
+      <li>This recorded video will be live streamed to our Wowza server and routed to the web application for live viewing.</li>
+      <li>Once you are done recording press ‘Stop Recording’ and the recording will be stopped and the video will be saved and uploaded to our web application.</li>
+      <li>You can then navigate to the DVR page where you will see a table of videos that have been saved.</li>
+      <li>Click on on of these videos and you will be taken to a player that will display the video while also providing information on the time and duration. Users will have the option to flag a video if it needs further inspection.</li>
+      <li>Navigate to the Preferences page to change settings of the application.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Running (Stitching Application):</p>
+
+    <ul>
+      <li>
+        <p>To run the app run the following command:</p>
+
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make run
+</code></pre>
+        </div>
+      </li>
+      <li>
+        <p>to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.</p>
+      </li>
+      <li>To run the cli, which provides the most functionality.:
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code>make cli
+</code></pre>
+        </div>
+      </li>
+      <li>To set up the camera streams
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make camera-setup
+</code></pre>
+        </div>
+      </li>
+      <li>To demonstrate threading through taking snapshots
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make snap
+</code></pre>
+        </div>
+      </li>
+      <li>
+        <p>To lint the application:</p>
+      </li>
+      <li>For JS files:
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>eslint nameoffile.js
+</code></pre>
+        </div>
+      </li>
+      <li>For Python files;
+        <div class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>make lint-py
+</code></pre>
+        </div>
+      </li>
+      <li>To run tests against the application:</li>
+    </ul>
+
+    <div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make <span class="nb">test</span>
+</code></pre>
+    </div>
   </li>
   <li>Troubleshooting:
     <ul>
@@ -267,6 +345,9 @@
       <li>Check your USB port numbers when you are making the configuration file, make sure that the port number corresponds to the stream coming in.</li>
       <li>When filming, make sure the cameras are level and have significant overlap in their field of view. If not, then the script will not be able to stitch the two streams properly.</li>
       <li>Make sure you have configured the correct ordering of camera indexes, i.e. left index is really on the left</li>
+      <li>The cameras should be in live feed mode, not playback mode.</li>
+      <li>The cameras should not be in fish eye mode.</li>
+      <li>Verify all of the dependicies have been correctly installed with the correct version numbers.</li>
     </ul>
   </li>
   <li>Viewing live stream on Wowza:
@@ -281,30 +362,28 @@
 
 <h1 id="administrator-manual">Administrator Manual</h1>
 
-<h3 id="stitching">Stitching</h3>
-
+<h3 id="desktop-application">Desktop Application</h3>
 <ul>
-  <li>Documentation:
-    <ul>
-      <li>Run the following command to generate documentation: make html</li>
-      <li>Run the following command to lint the code: make lint</li>
-      <li>Run the following command to test the code: make test</li>
-    </ul>
-  </li>
+  <li>Follow the instructions <a href="https://github.com/360ls/desktop/blob/master/README.md">here</a> to set up a developer environment for the electron app.</li>
+  <li>We are using the Yarn package manager to install all dependencies for the app so make sure you have the latest version installed as well as Node.js and the npm package manager.</li>
 </ul>
 
-<h3 id="streaming">Streaming</h3>
-
+<h3 id="web-application">Web Application</h3>
 <ul>
   <li>Wowza:
     <ul>
       <li>We have set up a Wowza streaming engine free trial on an AWS server. To gain administrative rights please contact us directly (we don’t want to put secure passwords on the web).</li>
       <li>To set up a new live application go to the “Applications” tab on the top of the engine manager page. Click the tab on the left that says “Add Application” and follow the prompts to configure settings.</li>
       <li>Right now we have our Application configured to accept any rtmp stream, and you can change these settings in the tab that says “Source Security”</li>
+      <li><a href="https://docs.google.com/document/d/1P3ktqEnJgV6XPH9jGXVkZrj0uZQlp852OA8L4wnukl0/edit">Here</a> is a link to our documentation on accessing the Wowza Streaming Engine over SSH. This is needed to start and stop the app as well as configure both the AWS instance and the Wowza instance.</li>
+    </ul>
+  </li>
+  <li>AWS S3:
+    <ul>
+      <li>Here (https://docs.google.com/document/d/1ap1i3Up0t6JJovi1SbXU570-4pcEgIIDbZy8u_Et4z0/edit) is a link that shows how to set up your development environment to work with our development bucket on S3 so you can develop against it.</li>
     </ul>
   </li>
 </ul>
-
 
 </div>
 

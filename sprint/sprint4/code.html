@@ -226,13 +226,38 @@
 
     <h2 id="desktop-application">Desktop Application</h2>
 
-<p>You can find the latest executables <a href="https://github.com/360ls/desktop/releases">here</a>.</p>
+<h3 id="hardware-setup">Hardware Setup</h3>
 
-<h3 id="windows">Windows</h3>
-<ol>
-  <li>Download the Windows release.</li>
-  <li>Unzip the file and open the executable inside.</li>
-</ol>
+<p>Our application is designed to be used on the <a href="http://www.nvidia.com/object/jetson-tx1-module.html">Jetson TX1</a> hardware.</p>
+
+<p>For our setup, we installed <a href="https://developer.nvidia.com/embedded/jetpack-2_1">Jetpack 2.1</a>. At the moment later versions are not supported because electron does not support ARM64 architecture currently.</p>
+
+<p>Pull down our <a href="https://github.com/360ls/provision.git">repository</a> that contains the provisioning scripts.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/provision.git
+</code></pre>
+</div>
+
+<p>Run the installer that will install <a href="https://www.ansible.com/">Ansible</a>.</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make install
+</code></pre>
+</div>
+
+<p>Run the provisioning script:</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make provision
+</code></pre>
+</div>
+
+<p><em>NOTE</em>: This step can take up to an hour as it will compile and install
+OpenCV from the source.</p>
+
+<p>Finally run our setup script:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make setup
+</code></pre>
+</div>
+<p>You can find the latest executables <a href="https://github.com/360ls/desktop/releases">here</a>.</p>
 
 <h3 id="ubuntudebian">Ubuntu/Debian</h3>
 <ol>
@@ -240,27 +265,7 @@
   <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
 </ol>
 
-<h3 id="macos">MacOS</h3>
-<ol>
-  <li>Download the MacOS release.</li>
-  <li>Unzip the file and open the executable inside.</li>
-</ol>
-
 <h2 id="stitcher-application">Stitcher Application</h2>
-
-<h3 id="install-opencv">Install OpenCV</h3>
-<p>360ls-stitcher requires <code class="highlighter-rouge">OpenCV</code> to be installed. 
-Listed below are instructions for installing OpenCV
-for various platforms.</p>
-<ul>
-  <li><a href="http://docs.opencv.org/2.4/doc/tutorials/introduction/linux_install/linux_install.html">Linux</a></li>
-  <li><a href="http://docs.opencv.org/2.4/doc/tutorials/introduction/windows_install/windows_install.html">Windows</a></li>
-  <li><a href="http://www.mobileway.net/2015/02/14/install-opencv-for-python-on-mac-os-x/">OSX</a></li>
-</ul>
-
-<h3 id="install-python">Install Python</h3>
-<p>Python 2.7 is required for running 360ls-stitcher.
-You can get find the release for a specific platform <a href="https://www.python.org/downloads/release/python-2712/">here</a>.</p>
 
 <h3 id="clone-the-stitch-flex-repository">Clone the stitch-flex repository</h3>
 

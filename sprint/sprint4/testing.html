@@ -226,43 +226,62 @@
 
     <h2 id="ideal-plan">Ideal Plan</h2>
 
+<h2 id="unit-tests">Unit Tests:</h2>
+<h3 id="stitching">Stitching:</h3>
 <ul>
-  <li>Unit Tests:
-    <ul>
-      <li>Use unit tests to systematically measure the functionality of the python stitching script.</li>
-      <li>Unit test the barrel distortion fixes that we made this sprint. Can we correctly calibrate the videos to reduce fish eye and barrel distortion?</li>
-      <li>Unit test the remapping of the calibrated images</li>
-      <li>Unit test the efficiency of the stitching algorithm. Are we stitching quickly enough to establish a true live stream.</li>
-      <li>Unit test the speed of the encoding. Is ffmpeg reading and encoding at a rate that is acceptable to produce a smooth live stream?</li>
-      <li>Unit test calibration of 4 live camera feeds.</li>
-      <li>Unit test the configuration using streams of different quality, sizes, and on different systems.</li>
-      <li>Unit test the rtmp connection to the AWS hosted Wowza server</li>
-      <li>Unit test playing a video on our web app</li>
-    </ul>
-  </li>
-  <li>Integration Tests:
-    <ul>
-      <li>Test the piping of images from python stitching module to the ffmpeg encoding. Do the output images from the stitching get correctly piped from our module to the ffmpeg rtmp stream?</li>
-      <li>Test the configuration of 4 live camera streams into our stitching module. Can the stitching script produce a video of 4 cameras stitched together?</li>
-      <li>Test the connection between AWS wowza server and our web app. Can we receive a live stream video onto our Django/Python app?</li>
-    </ul>
-  </li>
-  <li>Acceptance Tests:
-    <ul>
-      <li>Test viewing an output video from 4 live cameras stitched together. Look for things like low quality, lagging, warped around the sides, misalignment.</li>
-      <li>Test the live streaming from 4 cameras. Test for discoloration, lagging, jumpiness, buffering, etc.</li>
-    </ul>
-  </li>
-  <li>Final Test: Does the app take 4 live inputs, stitch them together, stream them over rtmp to wowza server, and push to a player on our web app where we can view the stream?</li>
+  <li>Use unit tests to systematically measure the functionality of the python stitching script.</li>
+  <li>Unit test the barrel distortion fixes that we made this sprint. Can we correctly calibrate the videos to reduce fish eye and barrel distortion?</li>
+  <li>Unit test the remapping of the calibrated images</li>
+  <li>Unit test the efficiency of the stitching algorithm. Are we stitching quickly enough to establish a true live stream.</li>
 </ul>
 
-<h2 id="actual-plan">Actual Plan</h2>
+<h3 id="streaming">Streaming:</h3>
+<ul>
+  <li>Unit test the speed of the encoding. Is ffmpeg reading and encoding at a rate that is acceptable to produce a smooth live stream?</li>
+  <li>Unit test calibration of 4 live camera feeds.</li>
+  <li>Unit test the configuration using streams of different quality, sizes, and on different systems.</li>
+  <li>Unit test the rtmp connection to the AWS hosted Wowza server</li>
+  <li>Unit test playing a video on our web app</li>
+</ul>
+
+<h3 id="desktop">Desktop:</h3>
+<ul>
+  <li>Unit test recording a video on the Desktop application</li>
+  <li>Unit test saving a video from the Desktop</li>
+  <li>Unit test uploading a video to the AWS server from the desktop</li>
+  <li>Unit test changing the preferences</li>
+  <li>Unit test sorting the videos and filtering by flag, date, time.</li>
+  <li>Unit test playing a video back on the desktop.</li>
+  <li>Unit test flagging a video</li>
+  <li>Unit test establishing an rtmp connection from the desktop</li>
+</ul>
+
+<h2 id="integration-tests">Integration Tests:</h2>
+<ul>
+  <li>Test the piping of images from python stitching module to the ffmpeg encoding. Do the output images from the stitching get correctly piped from our module to the ffmpeg rtmp stream?</li>
+  <li>Test sending a live stream from the desktop to the Wowza engine</li>
+  <li>Test the configuration of 4 live camera streams into our stitching module. Can the stitching script produce a video of 4 cameras stitched together?</li>
+  <li>Test the connection between AWS wowza server and our web app. Can we receive a live stream video onto our Django/Python app?</li>
+</ul>
+
+<h2 id="acceptance-tests">Acceptance Tests:</h2>
+<ul>
+  <li>Test our installation process for the desktop app. Can we successfully install our electron app onto the Jetson board following our instructions?</li>
+  <li>Test viewing an output video from 4 live cameras stitched together. Look for things like low quality, lagging, warped around the sides, misalignment.</li>
+  <li>Test the live streaming from 4 cameras. Test for discoloration, lagging, jumpiness, buffering, etc.
+    <h2 id="final-test">Final Test</h2>
+  </li>
+  <li>Does the desktop app take 4 live inputs, stitch them together, stream them over rtmp to wowza server, and push to a player on our web app where we can view the stream?</li>
+</ul>
+
+<h1 id="actual-plan">Actual Plan</h1>
 
 <ul>
   <li>Configuration Tests:
     <ul>
       <li>Script should be able to initialize 4 video streams</li>
       <li>Test that all video streams are visible and without errors</li>
+      <li>We should be able to install the desktop app onto the Jetson board</li>
     </ul>
   </li>
   <li>Stitching Tests:
@@ -283,9 +302,21 @@
   <li>Streaming Tests:
     <ul>
       <li>Test viewing a live streamed video on the Wowza server.</li>
-      <li>Look for errors like laggin, jumping, discoloration, buffering, etc.</li>
+      <li>Look for errors like lagging, jumping, discoloration, buffering, etc.</li>
       <li>Test viewing a video on the web app</li>
       <li>Test viewing a live stream video pushed from the Wowza server to the web app</li>
+    </ul>
+  </li>
+  <li>Desktop Tests:
+    <ul>
+      <li>Recording a video on the Desktop application</li>
+      <li>Saving a video from the Desktop</li>
+      <li>Uploading a video to the AWS server from the desktop</li>
+      <li>Changing the preferences</li>
+      <li>Sorting the videos and filtering by flag, date, time.</li>
+      <li>Playing a video back on the desktop.</li>
+      <li>Flagging a video</li>
+      <li>Establishing an rtmp connection from the desktop</li>
     </ul>
   </li>
   <li>Integration Tests:
