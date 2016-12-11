@@ -6,11 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>360 Life Stream :: Client Meeting #4</title>
-    <meta name="description" content="Summary  Set up the four cameras and captured sample videos for testing the stitching algorithm.">
+    <title>360 Life Stream :: Executable Code and Instructions</title>
+    <meta name="description" content="Desktop Application">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
-    <link rel="canonical" href="http://dongy7.github.io/360ls/blog/2016/09/23/client-meeting-4">
+    <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint5/code">
     <link rel="alternate" type="application/rss+xml" title="360 Life Stream" href="http://dongy7.github.io/360ls/feed.xml" />
 
     <link href='https://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
@@ -241,46 +241,122 @@
 
     <div class="post">
     <header class="post-header">
-    <h1>Client Meeting #4</h1>
-    <p class="post-meta">Posted on September 23, 2016</p>
-
-    
-
+        <h1>Executable Code and Instructions</h1>
     </header>
 
-    <h2 id="summary">Summary</h2>
-<ul>
-  <li>Set up the four cameras and captured sample videos for testing the stitching algorithm.</li>
-</ul>
+    <h2 id="desktop-application">Desktop Application</h2>
 
-<h2 id="goals">Goals</h2>
-<ul>
-  <li>Optimize stitching algorithm to work with four 4K video streams.</li>
-  <li>Implement output encodings to work with streaming service.</li>
-</ul>
+<h3 id="hardware-setup">Hardware Setup</h3>
 
+<p>Our application is designed to be used on the <a href="http://www.nvidia.com/object/jetson-tx1-module.html">Jetson TX1</a> hardware.</p>
 
-    
+<p>For our setup, we installed <a href="https://developer.nvidia.com/embedded/jetpack-2_1">Jetpack 2.1</a>. At the moment later versions are not supported because electron does not support ARM64 architecture currently.</p>
 
+<p>Pull down our <a href="https://github.com/360ls/provision.git">repository</a> that contains the provisioning scripts.</p>
 
-  <div id="disqus_thread"></div>
-<script type="text/javascript">
-    var disqus_developer = 1;
-    var disqus_shortname = '360ls'; // required: replace example with your forum shortname
-    
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/provision.git
+</code></pre>
+</div>
 
+<p>Run the installer that will install <a href="https://www.ansible.com/">Ansible</a>.</p>
 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make install
+</code></pre>
+</div>
 
+<p>Run the provisioning script:</p>
 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make provision
+</code></pre>
+</div>
+
+<p><em>NOTE</em>: This step can take up to an hour as it will compile and install
+OpenCV from the source.</p>
+
+<p>Finally run our setup script:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make setup
+</code></pre>
+</div>
+<p>You can find the latest executables <a href="https://github.com/360ls/desktop/releases">here</a>.</p>
+
+<h3 id="ubuntudebian">Ubuntu/Debian</h3>
+<ol>
+  <li>Download the debian release.</li>
+  <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
+</ol>
+
+<h2 id="stitcher-application">Stitcher Application</h2>
+
+<h3 id="clone-the-stitch-flex-repository">Clone the stitch-flex repository</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/360ls/stitch-flex.git
+</code></pre>
+</div>
+
+<h3 id="to-install-the-package">To install the package:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>stitch-flex
+git checkout origin checkpoint/sprint3
+make clean-install
+</code></pre>
+</div>
+
+<p>This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.</p>
+
+<h3 id="then-to-run-the-app-either">Then, to run the app, either:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make run
+</code></pre>
+</div>
+<p>to simply run the app</p>
+
+<p>OR</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make
+</code></pre>
+</div>
+
+<p>to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.</p>
+
+<h3 id="to-run-the-cli-which-provides-the-most-functionality">To run the cli, which provides the most functionality.:</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make cli
+</code></pre>
+</div>
+
+<h3 id="to-set-up-the-camera-streams">To set up the camera streams</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make camera-setup
+</code></pre>
+</div>
+
+<h3 id="to-demonstrate-threading-through-taking-snapshots">To demonstrate threading through taking snapshots</h3>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make snap
+</code></pre>
+</div>
+
+<h3 id="to-lint-the-application">To lint the application:</h3>
+
+<p>For JS files:</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>eslint nameoffile.js
+</code></pre>
+</div>
+
+<p>For Python files;</p>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make lint-py
+</code></pre>
+</div>
+
+<h3 id="to-run-tests-against-the-application">To run tests against the application:</h3>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make <span class="nb">test</span>
+</code></pre>
+</div>
+
+<hr />
+
+<h2 id="developing-and-building-the-desktop-application">Developing and Building the Desktop Application</h2>
+
+<p>You can find the instructions for setting up a developer
+environment for the desktop application <a href="https://github.com/360ls/desktop/blob/master/README.md">here</a>.</p>
 
 </div>
 
