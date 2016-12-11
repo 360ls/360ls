@@ -56,16 +56,17 @@ title: Test Plan
 
 ## Configuration
 
-- Script should be able to initialize 4 video streams
-- Test that all video streams are visible and without errors
-- We should be able to install the desktop app onto the Jetson board
+- Check that stitcher is able to initialize 1-2 video streams.
+- Test that all video streams are visible and without errors.
+- Check that provisioning script runs without errors.
+- Check that the setup test script passes without errors.
 
 ## Stitching Tests:
 
-- Use 4 video streams to test the quality of the stitching.
+- Use 2 video streams to test the quality of the stitching.
 - Look for missing video streams, stitching errors, warping, and poor resolution.
-- Test the efficiency of the stitching, is there lagging, jumpiness, etc.?
-- Test the barrel distortion correction fixes that we made this sprint.
+- Test the efficiency of the stitching (e.g. lagginess, jumpiness).
+- Check that the barrel distortion correction fixes are applied correctly.
 
 ## Encoding Tests:
 
@@ -77,11 +78,22 @@ title: Test Plan
 
 - Test viewing a live streamed video on the Wowza server.
 - Look for errors like lagging, jumping, discoloration, buffering, etc.
-- Test viewing a video on the web app
-- Test viewing a live stream video pushed from the Wowza server to the web app
+- Test viewing a video on the web app.
+- Test viewing a live stream video pushed from the Wowza server to the web app.
 
 ## Desktop Tests:
 
+### Unit Tests
+
+- Make sure UI components are displayed correctly.
+- Check that UI components respond to user actions.
+- Make sure actions are dispatched and received.
+- Check that correct new state is computed for each action.
+
+### Functional Tests
+
+- Previewing a camera
+- Streaming from the desktop application
 - Recording a video on the Desktop application
 - Saving a video from the Desktop
 - Uploading a video to the AWS server from the desktop
@@ -89,8 +101,7 @@ title: Test Plan
 - Sorting the videos and filtering by flag, date, time.
 - Playing a video back on the desktop.
 - Flagging a video
-- Establishing an rtmp connection from the desktop
 
 ## Integration Tests:
 
-- Test taking 4 live streams, stitch them together, pipe the output to ffmpeg, encode these frames into rtmp, push this stream to a wowza server, and view the live stream on our web app.
+- Test taking 2 live streams, stitch them together, pipe the output to ffmpeg, encode these frames into rtmp, push this stream to a wowza server, and view the live stream on our web app.
