@@ -3,7 +3,7 @@ layout: page
 title: Functional Specification - Sprint 4
 ---
 
-This portion of the website highlights the functional specification for the fourth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint. 
+This portion of the website highlights the functional specification for the fourth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint.
 
 # Use Cases
 
@@ -23,7 +23,7 @@ This portion of the website highlights the functional specification for the four
 
 ### On-box Application
 - Display a Stitched Video (use case of program to enable watching live video)
-	- Take video input from two camera feeds, correct distortion, and stitch it into one video 
+	- Take video input from two camera feeds, correct distortion, and stitch it into one video
 	- Correct distortion on videos
 	- Recognize when a feed is dead or occluded for adaptive stitching
 
@@ -66,7 +66,7 @@ This portion of the website highlights the functional specification for the four
 
 ### On-box Application
 - Display a Stitched Video (use case of program to enable watching live video)
-	- Take video input from two camera feeds, correct distortion, and stitch it into one video 
+	- Take video input from two camera feeds, correct distortion, and stitch it into one video
 	- Correct distortion on videos
 	- Recognize when a feed is dead or occluded for adaptive stitching
 
@@ -96,7 +96,7 @@ This portion of the website highlights the functional specification for the four
 - Stream Video to Client (use case of program to stream via Wowza from storage and live stitched stream)
 	- Consume RTMP stream from box application
 	- Live stream stitched video from server storage and live device stitched footage to client players.
- 
+
 
 ## Summary of Use Case Fulfillment
 During Sprint 4, we sought to have end to end functionality as follows, implemented on our box hardware:
@@ -109,11 +109,11 @@ During Sprint 4, we sought to have end to end functionality as follows, implemen
 
 4. Stream to desktop and web applications from Wowza
 
-We came very close to demonstrating this functionality, but we ran into issues configuring the box. After spending hours and hours configuring the box, we were able to demonstrate full functionality pieced together, even though it was not as perfect as we would have liked. That said, when we went in to demo for our client, we ran into trouble with our build and were not able to show the full end to end functionality that we had hoped to show in-person. That said, we are very close to having all of the basic functionality that we need for our project, at least with a two-camera array, and we fulfilled almost all of the use cases that we laid out for the development sprint. 
+We came very close to demonstrating this functionality, but we ran into issues configuring the box. After spending hours and hours configuring the box, we were able to demonstrate full functionality pieced together, even though it was not as perfect as we would have liked. That said, when we went in to demo for our client, we ran into trouble with our build and were not able to show the full end to end functionality that we had hoped to show in-person. That said, we are very close to having all of the basic functionality that we need for our project, at least with a two-camera array, and we fulfilled almost all of the use cases that we laid out for the development sprint.
 
 
 # Requirements
- 
+
 ## Requirements Targeted
 At the beginning of Sprint 4, we prioritized our requirements for the sprint as follows (with prioritization representing order of approach, not necessarily in order of project value):
 
@@ -167,7 +167,7 @@ After completion of Sprint 4, we were able to complete the following requirement
 	- Get reliable Wowza streaming hosted in a PaaS offering (Heroku or AWS, preferably.)
 	- Set up storage for archival of videos
 
-## Correspondance to Original Requirements
+## Correspondence to Original Requirements
 ** These requirements map to the following items from our requirements list from the beginning of the project: **
 
 ### Priority Level 1
@@ -187,17 +187,9 @@ The following interface views show the current state of the desktop application:
 ![Settings View](../../images/sprint4/settings.png)
 
 
-Also, the CLI for testing the stitching and streaming funcationality of the application has been vastly improved. Here is an example of that improvement:
+Also, the CLI for testing the stitching and streaming functionality of the application has been vastly improved. Here is an example of that improvement:
 ![Testing CLI](../../images/sprint4/CLI.png)
 
 As far as interfaces go, we also cleaned up our website navigation menu. Working with it in the past was messy when trying to navigate to different aspects of different sprints, so we cleaned up the CSS to make sure that menus did not overlap and confuse the user. This is what it looks like now:
 
 ![Navbar Fix](../../images/sprint4/navbar.png)
-
-
-
-
-
-
-
-

@@ -29,7 +29,7 @@ These manuals are operating under the assumption that the users and administrato
       - Stitch local videos will take configured video files, compute a homography, stitch frames together and output the result to a new windo for viewing.
       - Stream stitched videos will take input from camera streams, compute a homography, stitch frames together, pipe them to ffmpeg where they will be sent over an rtmp stream to our wowza server.
       - Check streams will tell you whether the specified camera index is valid
-      - Preview streams will allow you to view the unaltered live feed from the specied camera index.
+      - Preview streams will allow you to view the unaltered live feed from the specified camera index.
 
 - Troubleshooting:
   - Make sure video and image files are in the correct folder listed above in the set up section. If not, then they will not be found by the script.
@@ -60,4 +60,3 @@ These manuals are operating under the assumption that the users and administrato
   - We have set up a Wowza streaming engine free trial on an AWS server. To gain administrative rights please contact us directly (we don't want to put secure passwords on the web).
   - To set up a new live application go to the "Applications" tab on the top of the engine manager page. Click the tab on the left that says "Add Application" and follow the prompts to configure settings.
   - Right now we have our Application configured to accept any rtmp stream, and you can change these settings in the tab that says "Source Security"
-  

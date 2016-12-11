@@ -18,27 +18,27 @@ develop a way for users to view recordings and live video outside of the vehicle
         360 degree video. OpenCV is also optimized to support GPU acceleration and multi-core
         to create real-time applications. We will use the Python wrappers for OpenCV because
         we have much more experience with Python over C++, and since most of the processing work will be done
-        by the OpenCV library, we don't expect much of a performance benefit by using C++. 
+        by the OpenCV library, we don't expect much of a performance benefit by using C++.
     2. MATLAB:
         MATLAB has a well-documented and easy-to-learn library for computer vision. However, since
-        it is an interpreted language, it will be much harder to optimize for real-time stiching and encoding.
+        it is an interpreted language, it will be much harder to optimize for real-time stitching and encoding.
 
 * Ubuntu App
     1. **Electron App**:
-        An electron app can be built using familiar technology (HTML, CSS, and Javascript). 
+        An electron app can be built using familiar technology (HTML, CSS, and Javascript).
         We hope to reuse components from our web app (discussed below).
         http://electron.atom.io/
     2. Native Linux GUI:
         We could alternatively build a GUI with something like Qt framework that will allow
-        us to use C++. However it is technology that we are less comfortable with and seems 
+        us to use C++. However it is technology that we are less comfortable with and seems
         less intuitive for our simple UI.
         http://en.wikipedia.org/wiki/Qt_(software)
 
 * App for viewing video beyond the box:
     1. **Web App**:
-        We could build a responsive web app that will deliever good UX on all devices (computer,
+        We could build a responsive web app that will deliver good UX on all devices (computer,
         tablet, phone). It will allow for simpler development because we must build only one
-        application, and it is the platform our team has the most experience with. We will 
+        application, and it is the platform our team has the most experience with. We will
         use Django because we have some limited experience with the framework and an outside
         of the class team member is a Django expert should we encounter and difficulties.
         Alternatively we could go without a framework with PHP/ MySQL or use Rails but
