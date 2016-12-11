@@ -3,7 +3,7 @@ layout: page
 title: Manuals
 ---
 
-These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 4, not the entire finished product
+These manuals are operating under the assumption that the users and administrators will be utilizing the product of Sprint 5, not the entire finished product.
 
 # User Manual
 
@@ -62,12 +62,12 @@ $ make run
 
 - To run the cli, which provides the most functionality:
 ```sh
-make cli
+$ make cli
 ```
 
 - To run utility functions:
 ```sh
-make utils
+$ make utils
 ```
 
 ## Troubleshooting:
@@ -78,7 +78,7 @@ make utils
 - Make sure you have configured the correct ordering of camera indexes, i.e. left index is really on the left
 - The cameras should be in live feed mode, not playback mode.
 - The cameras should not be in fish eye mode.
-- Verify all of the dependicies have been correctly installed with the correct version numbers.
+- Verify all of the dependencies have been correctly installed with the correct version numbers.
 
 
 ## Viewing live stream on Wowza:
