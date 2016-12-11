@@ -11,7 +11,7 @@ title: Test Plan
 
 - Use unit tests to systematically measure the functionality of the python stitching script.
 - Unit test the barrel distortion fixes that we made this sprint. Can we correctly calibrate the videos to reduce fish eye and barrel distortion?
-- Unit test the remapping of the calibrated images
+- Unit test the remapping of the calibrated images.
 - Unit test the efficiency of the stitching algorithm. Are we stitching quickly enough to establish a true live stream.
 
 ### Streaming:
@@ -19,24 +19,24 @@ title: Test Plan
 - Unit test the speed of the encoding. Is ffmpeg reading and encoding at a rate that is acceptable to produce a smooth live stream?
 - Unit test calibration of 4 live camera feeds.
 - Unit test the configuration using streams of different quality, sizes, and on different systems.
-- Unit test the rtmp connection to the AWS hosted Wowza server
-- Unit test playing a video on our web app
+- Unit test the rtmp connection to the AWS hosted Wowza server.
+- Unit test playing a video on our web app.
 
 ### Desktop:
 
-- Unit test recording a video on the Desktop application
-- Unit test saving a video from the Desktop
-- Unit test uploading a video to the AWS server from the desktop
-- Unit test changing the preferences
+- Unit test recording a video on the Desktop application.
+- Unit test saving a video from the Desktop.
+- Unit test uploading a video to the AWS server from the desktop.
+- Unit test changing the preferences.
 - Unit test sorting the videos and filtering by flag, date, time.
 - Unit test playing a video back on the desktop.
-- Unit test flagging a video
-- Unit test establishing an rtmp connection from the desktop
+- Unit test flagging a video.
+- Unit test establishing an rtmp connection from the desktop.
 
 ## Integration Tests:
 
 - Test the piping of images from python stitching module to the ffmpeg encoding. Do the output images from the stitching get correctly piped from our module to the ffmpeg rtmp stream?
-- Test sending a live stream from the desktop to the Wowza engine
+- Test sending a live stream from the desktop to the Wowza engine.
 - Test the configuration of 4 live camera streams into our stitching module. Can the stitching script produce a video of 4 cameras stitched together?
 - Test the connection between AWS wowza server and our web app. Can we receive a live stream video onto our Django/Python app?
 
@@ -70,9 +70,9 @@ title: Test Plan
 
 ## Encoding Tests:
 
-- Check that an RTMP stream can be established to a server
-- Test sending video files over RTMP stream to Wowza server
-- Test sending a live stream video over RTMP to wowza server
+- Check that an RTMP stream can be established to a server.
+- Test sending video files over RTMP stream to Wowza server.
+- Test sending a live stream video over RTMP to wowza server.
 
 ## Streaming Tests:
 
@@ -92,15 +92,15 @@ title: Test Plan
 
 ### Functional Tests
 
-- Previewing a camera
-- Streaming from the desktop application
-- Recording a video on the Desktop application
-- Saving a video from the Desktop
-- Uploading a video to the AWS server from the desktop
-- Changing the preferences
+- Previewing a camera.
+- Streaming from the desktop application.
+- Recording a video on the Desktop application.
+- Saving a video from the Desktop.
+- Uploading a video to the AWS server from the desktop.
+- Changing the preferences.
 - Sorting the videos and filtering by flag, date, time.
 - Playing a video back on the desktop.
-- Flagging a video
+- Flagging a video.
 
 ## Integration Tests:
 
