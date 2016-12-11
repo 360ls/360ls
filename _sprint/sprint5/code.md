@@ -42,73 +42,39 @@ You can find the latest executables [here](https://github.com/360ls/desktop/rele
 1. Download the debian release.
 2. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
 
+
+## Web Application
+To use the web application, go [here](https://vcms.herokuapp.com).
+
 ## Stitcher Application
 
-### Clone the stitch-flex repository
+### Clone the stitcher repository
 
 ```bash
-git clone https://github.com/360ls/stitch-flex.git
+git clone https://github.com/360ls/stitcher.git
 ```
 
 
 ### To install the package:
 
 ```bash
-cd stitch-flex
-git checkout origin checkpoint/sprint3
-make clean-install
+cd stitcher
+git checkout origin results/final
+make install
 ```
 
-This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.
+This will install package dependencies via pip (python)
 
-### Then, to run the app, either:
+### Then, to run the app
 
 ```bash
 make run
 ```
-to simply run the app
 
-OR
-
-```bash
-make
-```
-
-to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.
-
-### To run the cli, which provides the most functionality.:
+### To run the cli, which allows for testing and development utilities
 ```bash
 make cli
 ```
-
-### To set up the camera streams
-```bash
-make camera-setup
-```
-
-### To demonstrate threading through taking snapshots
-```bash
-make snap
-```
-
-### To lint the application:
-
-For JS files:
-```bash
-eslint nameoffile.js
-```
-
-For Python files;
-```bash
-make lint-py
-```
-
-### To run tests against the application:
-
-```bash
-make test
-```
-
 -------
 
 ## Developing and Building the Desktop Application
