@@ -48,8 +48,6 @@ This portion of the website highlights the functional specification for the fift
 	- Send stitched video to a server for storage
 	- Live stream stitched video from server storage and live device stitched footage
 
-### Server-side
-
 
 ## Use Cases Realized
 
@@ -152,9 +150,9 @@ The following interface view shows the final state of the web application:
 
 The following images show examples of the stitch that we were able to achieve at the end of the semester:
 
-![Stitch of Shirt](../../images/middle-shirt.png)
+![Stitch of Shirt](../../images/sprint5/middle-shirt.png)
 
-![Stitch of Face](../../images/stitch-face.png)
+![Stitch of Face](../../images/sprint5/stitch-face.png)
 
 
 # Final Evaluation
