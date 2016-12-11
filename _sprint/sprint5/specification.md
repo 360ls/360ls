@@ -15,7 +15,7 @@ This portion of the website highlights the functional specification for the fift
 	- Pan around the 360 video
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes
+	- The user can scroll through a list of all videos
 	- Filter to find by date, or officer ID
 
 - Watch Archived Video
@@ -30,7 +30,7 @@ This portion of the website highlights the functional specification for the fift
 	- Integrated in box application.
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes associated with their account
+	- The user can scroll through a list of all videos associated with their account
 	- Filter to find by date, etc.
 
 - Watch Archived Video
@@ -57,7 +57,7 @@ This portion of the website highlights the functional specification for the fift
 	- Pan around the 360 video
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes
+	- The user can scroll through a list of all videos
 	- Filter to find by date, or officer ID
 
 - Watch Archived Video
@@ -72,7 +72,7 @@ This portion of the website highlights the functional specification for the fift
 	- Outside of box application.
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes associated with their account
+	- The user can scroll through a list of all videos associated with their account
 	- Filter to find by date, etc.
 
 - Watch Archived Video
@@ -88,13 +88,13 @@ This portion of the website highlights the functional specification for the fift
 - Stream Video (use case of program to enable streamed video in on-box and web applications)
 	- Send stitched video to a server for storage
 	- Live stream stitched video from server storage and live device stitched footage
- 
+
 
 ## Summary of Use Case Fulfillment
 During Sprint 5, we came very close to demonstrating all of the functionality that we wanted to demonstrate. The only two things that we missed out on were integrated stitching, which was not possible with hardware constraints, and live preview within the app. To compensate for lack of live preview in the app, we provided live preview in a separate window outside of the app, but automatically maximized that window to make the interaction with the live view seamless.
 
 # Requirements
- 
+
 ## Requirements Targeted
 At the beginning of Sprint 5, we prioritized our requirements for the sprint as follows (with prioritization representing order of approach, not necessarily in order of project value):
 
@@ -157,7 +157,3 @@ The following images show examples of the stitch that we were able to achieve at
 
 # Final Evaluation
 Though we did not end up with exactly what we had hoped to end up with at the end of the semester, we came much farther than I ever could have imagined. Possibly the hardest part of the project, stitching, became a problem as we got closer and closer to the end of the project, but we were able to find a way to make it work, at least in the form of a proof of concept. Using a plethora of new hardware and software that none of the people in our group had ever used, we were able to make a lot of things happen, and it came through a lot of hard work. I am proud of where we ended up as a team, and I think our work reflects the many many hours that we put in to bring this thing to fruition.
-
-
-
-

@@ -13,34 +13,39 @@ For our setup, we installed [Jetpack 2.1](https://developer.nvidia.com/embedded/
 
 Pull down our [repository](https://github.com/360ls/provision.git) that contains the provisioning scripts.
 
-```bash
+```sh
 $ git clone https://github.com/360ls/provision.git
 ```
 
 Run the installer that will install [Ansible](https://www.ansible.com/).
 
-```bash
+```sh
 $ make install
 ```
 
 Run the provisioning script:
 
-```bash
+```sh
 $ make provision
 ```
 
 *NOTE*: This step can take up to an hour as it will compile and install
 OpenCV from the source.
 
-Finally run our setup script:
-```bash
-$ make setup
+When the provisioning step is done, run the test script
+to make sure the `OpenCV` functionalities are working. A working
+usb camera needs to be connected for this step.
+
+```sh
+$ make test
 ```
 You can find the latest executables [here](https://github.com/360ls/desktop/releases).
 
-### Ubuntu/Debian
-1. Download the debian release.
-2. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
+### Running the Desktop Application
+
+1. Download the latest zipped release.
+2. Unzip with `unzip 360ls-x.y.z-armv7l.zip`, where `x.y.z` is the latest version number.
+3. Run the executable called `360ls` inside the unzipped directory.
 
 
 ## Web Application
@@ -50,30 +55,30 @@ To use the web application, go [here](https://vcms.herokuapp.com).
 
 ### Clone the stitcher repository
 
-```bash
-git clone https://github.com/360ls/stitcher.git
+```sh
+$ git clone https://github.com/360ls/stitcher.git
 ```
 
 
 ### To install the package:
 
-```bash
-cd stitcher
-git checkout origin results/final
-make install
+```sh
+$ cd stitcher
+$ git checkout origin results/final
+$ make install
 ```
 
 This will install package dependencies via pip (python)
 
 ### Then, to run the app
 
-```bash
-make run
+```sh
+$ make run
 ```
 
 ### To run the cli, which allows for testing and development utilities
-```bash
-make cli
+```sh
+$ make cli
 ```
 -------
 
