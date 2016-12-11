@@ -7,23 +7,22 @@ These manuals are operating under the assumption that the users and administrato
 ## User Manual
 
 For setting up the required software on the Jetson TX1, use our provisioning [scripts](https://github.com/360ls/provision.git).
-We assume that the Jetson has been provisioned and set up properly in the
-following steps.
+
+We assume that the Jetson has been provisioned with our scripts in the following steps.
 
 - Prerequisites:
   1. Python 2.7
-  2. Opencv 2.4 python library
+  2. Opencv 2.4 with Python bindings
   3. 2+ USB cameras
   4. Wowza cloud streaming engine server
-  5. FFmpeg 3.1.4 software package for Python installed
-  6. Jetson board with Ubuntu 14.04 installed
+  5. ffmpeg 3.2.x
+  6. Jetson TX1 board with Jetpack 2.1
 
 
 - Set up (Desktop Application):
-  1. Make sure all dependencies are installed on the box before you try to run the application
-  2. Download the desktop application from our github page [here](https://github.com/360ls/desktop/releases)
-  3. You can find detailed instructions on how to install and run the code [here](https://360ls.github.io/360ls/sprint/sprint4/code)
-  4. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
+  1. Download the desktop application from our github page [here](https://github.com/360ls/desktop/releases)
+  2. You can find detailed instructions on how to install and run the code [here](https://360ls.github.io/360ls/sprint/sprint5/code)
+  3. Unzip the release and open the binary called `360ls`.
 
 
 - Set up (Web Application):
@@ -31,22 +30,8 @@ following steps.
 
 - Set up (Stitching Application):
     1. Make sure you have the correct versions of OpenCV and Python installed.
-    2. Clone the stitch-flex repository by running the command:
-```bash
-$ git clone https://github.com/360ls/stitch-flex.git
-```
-
-
-  - To install the package:
-
-  ```bash
-  $ cd stitch-flex
-  $ git checkout origin checkpoint/sprint3
-  $ make clean-install
-  ```
-
-  - This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.
-
+    2. Clone the stitcher repository: `git clone https://github.com/360ls/stitcher.git`.
+    3. Install the dependencies: `make install`.
 
 - Running (Desktop Application):
   - Use the tab bar in the upper left of the app to navigate between the DVR mode, Live mode, and Preferences
@@ -60,46 +45,19 @@ $ git clone https://github.com/360ls/stitch-flex.git
 - Running (Stitching Application):
 
   - To run the app run the following command:
+  ```sh
+  $ make run
+  ```
 
-    ```bash
-    $ make run
-    ```
-
-  - to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.
-
-  - To run the cli, which provides the most functionality.:
-  ```bash
+  - To run the cli, which provides the most functionality:
+  ```sh
   make cli
   ```
 
-  - To set up the camera streams
-  ```bash
-  $ make camera-setup
+  - To run utility functions:
+  ```sh
+  make utils
   ```
-
-  - To demonstrate threading through taking snapshots
-  ```bash
-  $ make snap
-  ```
-
-  - To lint the application:
-
-   - For JS files:
-  ```bash
-  $ eslint nameoffile.js
-  ```
-
-   - For Python files;
-  ```bash
-   $ make lint-py
-  ```
-
-  - To run tests against the application:
-
-  ```bash
-  $ make test
-  ```
-
 
 - Troubleshooting:
   - Make sure video and image files are in the correct folder listed above in the set up section. If not, then they will not be found by the script.
