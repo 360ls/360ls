@@ -254,35 +254,40 @@
 
 <p>Pull down our <a href="https://github.com/360ls/provision.git">repository</a> that contains the provisioning scripts.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/provision.git
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/provision.git
 </code></pre>
 </div>
 
 <p>Run the installer that will install <a href="https://www.ansible.com/">Ansible</a>.</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make install
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make install
 </code></pre>
 </div>
 
 <p>Run the provisioning script:</p>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make provision
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make provision
 </code></pre>
 </div>
 
 <p><em>NOTE</em>: This step can take up to an hour as it will compile and install
 OpenCV from the source.</p>
 
-<p>Finally run our setup script:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make setup
+<p>When the provisioning step is done, run the test script
+to make sure the <code class="highlighter-rouge">OpenCV</code> functionalities are working. A working
+usb camera needs to be connected for this step.</p>
+
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make <span class="nb">test</span>
 </code></pre>
 </div>
 <p>You can find the latest executables <a href="https://github.com/360ls/desktop/releases">here</a>.</p>
 
-<h3 id="ubuntudebian">Ubuntu/Debian</h3>
+<h3 id="running-the-desktop-application">Running the Desktop Application</h3>
+
 <ol>
-  <li>Download the debian release.</li>
-  <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
+  <li>Download the latest zipped release.</li>
+  <li>Unzip with <code class="highlighter-rouge">unzip 360ls-x.y.z-armv7l.zip</code>, where <code class="highlighter-rouge">x.y.z</code> is the latest version number.</li>
+  <li>Run the executable called <code class="highlighter-rouge">360ls</code> inside the unzipped directory.</li>
 </ol>
 
 <h2 id="web-application">Web Application</h2>
@@ -292,15 +297,15 @@ OpenCV from the source.</p>
 
 <h3 id="clone-the-stitcher-repository">Clone the stitcher repository</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/360ls/stitcher.git
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>git clone https://github.com/360ls/stitcher.git
 </code></pre>
 </div>
 
 <h3 id="to-install-the-package">To install the package:</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>stitcher
-git checkout origin results/final
-make install
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span><span class="nb">cd </span>stitcher
+<span class="gp">$ </span>git checkout origin results/final
+<span class="gp">$ </span>make install
 </code></pre>
 </div>
 
@@ -308,12 +313,12 @@ make install
 
 <h3 id="then-to-run-the-app">Then, to run the app</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make run
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make run
 </code></pre>
 </div>
 
 <h3 id="to-run-the-cli-which-allows-for-testing-and-development-utilities">To run the cli, which allows for testing and development utilities</h3>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make cli
+<div class="language-sh highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>make cli
 </code></pre>
 </div>
 <hr />
