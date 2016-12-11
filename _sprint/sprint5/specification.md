@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Functional Specification - Sprint 4
+title: Functional Specification - Sprint 5
 ---
 
-This portion of the website highlights the functional specification for the fourth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint. 
+This portion of the website highlights the functional specification for the fifth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint. Because this was the last sprint, it also provides final versions of our interfaces, along with an evaluation of where we ended up at the end of the semester.
 
 # Use Cases
 
@@ -180,19 +180,11 @@ After completion of Sprint 4, we were able to complete the following requirement
 
 
 # Interfaces
-The following interface views show the current state of the desktop application:
-![Unfiltered View](../../images/sprint4/filter.png)
-![Filtered View](../../images/sprint4/filter1.png)
-![Archived Video View](../../images/sprint4/video.png)
-![Settings View](../../images/sprint4/settings.png)
+The following interface views show the final state of the desktop application:
 
+The following interface views show the final state of the web application:
 
-Also, the CLI for testing the stitching and streaming funcationality of the application has been vastly improved. Here is an example of that improvement:
-![Testing CLI](../../images/sprint4/CLI.png)
-
-As far as interfaces go, we also cleaned up our website navigation menu. Working with it in the past was messy when trying to navigate to different aspects of different sprints, so we cleaned up the CSS to make sure that menus did not overlap and confuse the user. This is what it looks like now:
-
-![Navbar Fix](../../images/sprint4/navbar.png)
+The following images show examples of the stitch that we were able to achieve at the end of the semester:
 
 
 
