@@ -285,72 +285,37 @@ OpenCV from the source.</p>
   <li>Run <code class="highlighter-rouge">sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb</code>.</li>
 </ol>
 
+<h2 id="web-application">Web Application</h2>
+<p>To use the web application, go <a href="https://vcms.herokuapp.com">here</a>.</p>
+
 <h2 id="stitcher-application">Stitcher Application</h2>
 
-<h3 id="clone-the-stitch-flex-repository">Clone the stitch-flex repository</h3>
+<h3 id="clone-the-stitcher-repository">Clone the stitcher repository</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/360ls/stitch-flex.git
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>git clone https://github.com/360ls/stitcher.git
 </code></pre>
 </div>
 
 <h3 id="to-install-the-package">To install the package:</h3>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>stitch-flex
-git checkout origin checkpoint/sprint3
-make clean-install
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd </span>stitcher
+git checkout origin results/final
+make install
 </code></pre>
 </div>
 
-<p>This will install package dependencies via npm (node.js) and pip (python), including the yarn package manager dependency.</p>
+<p>This will install package dependencies via pip (python)</p>
 
-<h3 id="then-to-run-the-app-either">Then, to run the app, either:</h3>
+<h3 id="then-to-run-the-app">Then, to run the app</h3>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>make run
 </code></pre>
 </div>
-<p>to simply run the app</p>
 
-<p>OR</p>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make
-</code></pre>
-</div>
-
-<p>to clean the package, do a fresh (but not brand new) install of dependencies, and then run the app.</p>
-
-<h3 id="to-run-the-cli-which-provides-the-most-functionality">To run the cli, which provides the most functionality.:</h3>
+<h3 id="to-run-the-cli-which-allows-for-testing-and-development-utilities">To run the cli, which allows for testing and development utilities</h3>
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>make cli
 </code></pre>
 </div>
-
-<h3 id="to-set-up-the-camera-streams">To set up the camera streams</h3>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make camera-setup
-</code></pre>
-</div>
-
-<h3 id="to-demonstrate-threading-through-taking-snapshots">To demonstrate threading through taking snapshots</h3>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make snap
-</code></pre>
-</div>
-
-<h3 id="to-lint-the-application">To lint the application:</h3>
-
-<p>For JS files:</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>eslint nameoffile.js
-</code></pre>
-</div>
-
-<p>For Python files;</p>
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make lint-py
-</code></pre>
-</div>
-
-<h3 id="to-run-tests-against-the-application">To run tests against the application:</h3>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>make <span class="nb">test</span>
-</code></pre>
-</div>
-
 <hr />
 
 <h2 id="developing-and-building-the-desktop-application">Developing and Building the Desktop Application</h2>

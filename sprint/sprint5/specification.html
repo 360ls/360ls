@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>360 Life Stream :: Functional Specification - Sprint 4</title>
-    <meta name="description" content="This portion of the website highlights the functional specification for the fourth development sprint. This functional specification includes use cases, requ...">
+    <title>360 Life Stream :: Functional Specification - Sprint 5</title>
+    <meta name="description" content="This portion of the website highlights the functional specification for the fifth development sprint. This functional specification includes use cases, requi...">
 
     <link rel="stylesheet" href="/360ls/css/main.css">
     <link rel="canonical" href="http://dongy7.github.io/360ls/sprint/sprint5/specification">
@@ -241,284 +241,151 @@
 
     <div class="post">
     <header class="post-header">
-        <h1>Functional Specification - Sprint 4</h1>
+        <h1>Functional Specification - Sprint 5</h1>
     </header>
 
-    <p>This portion of the website highlights the functional specification for the fourth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint.</p>
+    <p>This portion of the website highlights the functional specification for the fifth development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint. Because this was the last sprint, it also provides final versions of our interfaces, along with an evaluation of where we ended up at the end of the semester.</p>
 
 <h1 id="use-cases">Use Cases</h1>
 
 <h2 id="use-cases-targeted">Use Cases Targeted</h2>
 
 <h3 id="web-application">Web Application</h3>
+
 <ul>
   <li>Watch Live Video
     <ul>
-      <li>See live stream in browser via web player</li>
-      <li>Change video display quality</li>
+      <li>Pan around the 360 video</li>
+    </ul>
+  </li>
+  <li>Filter Archived Videos
+    <ul>
+      <li>The user can scroll through a list of all vidoes</li>
+      <li>Filter to find by date, or officer ID</li>
     </ul>
   </li>
   <li>Watch Archived Video
     <ul>
-      <li>Watch saved videos in browser via web player</li>
+      <li>Pan around the 360 video</li>
       <li>Pause the video</li>
       <li>Rewind the video</li>
-      <li>Full screen the video</li>
-      <li>Change video display quality</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="on-box-application">On-box Application</h3>
+
 <ul>
+  <li>Watch Live Video In-app
+    <ul>
+      <li>See the situation around the car from a live no-latency feed on the in-car box.</li>
+      <li>Integrated in box application.</li>
+    </ul>
+  </li>
+  <li>Filter Archived Videos
+    <ul>
+      <li>The user can scroll through a list of all vidoes associated with their account</li>
+      <li>Filter to find by date, etc.</li>
+    </ul>
+  </li>
+  <li>Watch Archived Video
+    <ul>
+      <li>Pause the video</li>
+      <li>Rewind the video</li>
+    </ul>
+  </li>
+  <li>
+    <p>Manually Start and Stop Recording
+  -The user can toggle between a recording and docile state</p>
+  </li>
   <li>Display a Stitched Video (use case of program to enable watching live video)
     <ul>
-      <li>Take video input from two camera feeds, correct distortion, and stitch it into one video</li>
-      <li>Correct distortion on videos</li>
-      <li>Recognize when a feed is dead or occluded for adaptive stitching</li>
+      <li>Take video input from four camera streams and stitch it into one video</li>
+      <li>Convert that stitched video into multiple encodings of a 360 degree video</li>
     </ul>
   </li>
   <li>Stream Video (use case of program to enable streamed video in on-box and web applications)
     <ul>
       <li>Send stitched video to a server for storage</li>
-      <li>Send stitched video to RTMP stream for consumption</li>
-    </ul>
-  </li>
-  <li>Stitch and Stream Video from Desktop Application
-    <ul>
-      <li>Combine stitching and streaming of video and allow for calling within the Desktop application</li>
-    </ul>
-  </li>
-  <li>Watch Live Video
-    <ul>
-      <li>See the situation around the car from a live on-latency feed on the in-car box.</li>
-      <li>See live video in a simple player</li>
-    </ul>
-  </li>
-  <li>Watch Archived Videos
-    <ul>
-      <li>Pause the video</li>
-      <li>Rewind the video</li>
-      <li>Full screen the video</li>
-    </ul>
-  </li>
-  <li>Filter Archived Videos
-    <ul>
-      <li>Scroll through a list of all videos associated with the user’s account.</li>
-      <li>Filter to find video by date, etc.</li>
-    </ul>
-  </li>
-  <li>Flag Videos for Consideration
-    <ul>
-      <li>Allow the user to flag a video for later consideration and tracking</li>
-    </ul>
-  </li>
-  <li>Manually Start and Stop Recording
-    <ul>
-      <li>Allow the user to toggle between a recording and non-recording state.</li>
+      <li>Live stream stitched video from server storage and live device stitched footage</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="server-side">Server-side</h3>
-<ul>
-  <li>Stream Video to Client (use case of program to stream via Wowza from storage and live stitched stream)
-    <ul>
-      <li>Consume RTMP stream from box application</li>
-      <li>Live stream stitched video from server storage and live device stitched footage to client players.</li>
-    </ul>
-  </li>
-</ul>
 
 <h2 id="use-cases-realized">Use Cases Realized</h2>
 
 <h3 id="web-application-1">Web Application</h3>
+
 <ul>
   <li>Watch Live Video
     <ul>
-      <li>See live stream in browser via web player</li>
-      <li>Change video display quality</li>
+      <li>Pan around the 360 video</li>
+    </ul>
+  </li>
+  <li>Filter Archived Videos
+    <ul>
+      <li>The user can scroll through a list of all vidoes</li>
+      <li>Filter to find by date, or officer ID</li>
+    </ul>
+  </li>
+  <li>Watch Archived Video
+    <ul>
+      <li>Pan around the 360 video</li>
+      <li>Pause the video</li>
+      <li>Rewind the video</li>
     </ul>
   </li>
 </ul>
 
 <h3 id="on-box-application-1">On-box Application</h3>
+
 <ul>
-  <li>Display a Stitched Video (use case of program to enable watching live video)
+  <li>Watch Live Video
     <ul>
-      <li>Take video input from two camera feeds, correct distortion, and stitch it into one video</li>
-      <li>Correct distortion on videos</li>
-      <li>Recognize when a feed is dead or occluded for adaptive stitching</li>
+      <li>See the situation around the car from a live no-latency feed on the in-car box.</li>
+      <li>Outside of box application.</li>
+    </ul>
+  </li>
+  <li>Filter Archived Videos
+    <ul>
+      <li>The user can scroll through a list of all vidoes associated with their account</li>
+      <li>Filter to find by date, etc.</li>
+    </ul>
+  </li>
+  <li>Watch Archived Video
+    <ul>
+      <li>Pause the video</li>
+      <li>Rewind the video</li>
+    </ul>
+  </li>
+  <li>
+    <p>Manually Start and Stop Recording
+  -The user can toggle between a recording and docile state</p>
+  </li>
+  <li>Display a Video (use case of program to enable watching live video)
+    <ul>
+      <li>Take video input from one camera feed and display that video</li>
     </ul>
   </li>
   <li>Stream Video (use case of program to enable streamed video in on-box and web applications)
     <ul>
       <li>Send stitched video to a server for storage</li>
-      <li>Send stitched video to RTMP stream for consumption</li>
-    </ul>
-  </li>
-  <li>Stitch and Stream Video from Desktop Application
-    <ul>
-      <li>Combine stitching and streaming of video and allow for calling within the Desktop application</li>
-    </ul>
-  </li>
-  <li>Watch Archived Videos
-    <ul>
-      <li>Pause the video</li>
-      <li>Rewind the video</li>
-      <li>Full screen the video</li>
-    </ul>
-  </li>
-  <li>Filter Archived Videos
-    <ul>
-      <li>Scroll through a list of all videos associated with the user’s account.</li>
-      <li>Filter to find video by date, etc.</li>
-    </ul>
-  </li>
-  <li>Flag Videos for Consideration
-    <ul>
-      <li>Allow the user to flag a video for later consideration and tracking</li>
-    </ul>
-  </li>
-  <li>Manually Start and Stop Recording
-    <ul>
-      <li>Allow the user to toggle between a recording and non-recording state.</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="server-side-1">Server-side</h3>
-<ul>
-  <li>Stream Video to Client (use case of program to stream via Wowza from storage and live stitched stream)
-    <ul>
-      <li>Consume RTMP stream from box application</li>
-      <li>Live stream stitched video from server storage and live device stitched footage to client players.</li>
+      <li>Live stream stitched video from server storage and live device stitched footage</li>
     </ul>
   </li>
 </ul>
 
 <h2 id="summary-of-use-case-fulfillment">Summary of Use Case Fulfillment</h2>
-<p>During Sprint 4, we sought to have end to end functionality as follows, implemented on our box hardware:</p>
-
-<ol>
-  <li>
-    <p>Receive two camera feeds</p>
-  </li>
-  <li>
-    <p>Correct and stitch camera feeds</p>
-  </li>
-  <li>
-    <p>Send stitched frames via RTMP to Wowza</p>
-  </li>
-  <li>
-    <p>Stream to desktop and web applications from Wowza</p>
-  </li>
-</ol>
-
-<p>We came very close to demonstrating this functionality, but we ran into issues configuring the box. After spending hours and hours configuring the box, we were able to demonstrate full functionality pieced together, even though it was not as perfect as we would have liked. That said, when we went in to demo for our client, we ran into trouble with our build and were not able to show the full end to end functionality that we had hoped to show in-person. That said, we are very close to having all of the basic functionality that we need for our project, at least with a two-camera array, and we fulfilled almost all of the use cases that we laid out for the development sprint.</p>
+<p>During Sprint 5, we came very close to demonstrating all of the functionality that we wanted to demonstrate. The only two things that we missed out on were integrated stitching, which was not possible with hardware constraints, and live preview within the app. To compensate for lack of live preview in the app, we provided live preview in a separate window outside of the app, but automatically maximized that window to make the interaction with the live view seamless.</p>
 
 <h1 id="requirements">Requirements</h1>
 
 <h2 id="requirements-targeted">Requirements Targeted</h2>
-<p>At the beginning of Sprint 4, we prioritized our requirements for the sprint as follows (with prioritization representing order of approach, not necessarily in order of project value):</p>
+<p>At the beginning of Sprint 5, we prioritized our requirements for the sprint as follows (with prioritization representing order of approach, not necessarily in order of project value):</p>
 
 <h3 id="priority-1">Priority 1</h3>
-<ul>
-  <li>The Box
-    <ul>
-      <li>Stitch 2 videos together and stream them to Wowza
-        <ul>
-          <li>Completed stitching script for local video and camera feed inputs</li>
-          <li>Set up hardware to process 2 feeds for consumption in the stitching script</li>
-          <li>Handle correction from within stitching algorithm</li>
-        </ul>
-      </li>
-      <li>Create Electron box application for handling display of streams and local videos.
-        <ul>
-          <li>Call python script to correct, stitch, and stream feeds from within Electron</li>
-        </ul>
-      </li>
-      <li>Set up a file system to store videos locally on the box</li>
-      <li>Improve stitching algorithm to work well with live video streams, fix distortion, and use cubemap if necessary</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="priority-2">Priority 2</h3>
-<ul>
-  <li>The Box
-    <ul>
-      <li>Handle flexible identification of invalid feed inputs.</li>
-    </ul>
-  </li>
-  <li>Web Application
-    <ul>
-      <li>Get Django application up and running with Wowza streaming to React-enable frontend.</li>
-      <li>Set up RESTful endpoint for video upload into online storage</li>
-    </ul>
-  </li>
-  <li>Server-side
-    <ul>
-      <li>Get reliable Wowza streaming hosted in a PaaS offering (Heroku or AWS, preferably.)</li>
-      <li>Set up storage for archival of videos</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="requirements-realized">Requirements Realized</h2>
-<p>After completion of Sprint 4, we were able to complete the following requirements, all that we set out to complete in one for or another.</p>
-
-<h3 id="priority-1-1">Priority 1</h3>
-<ul>
-  <li>The Box
-    <ul>
-      <li>Stitch 2 videos together and stream them to Wowza
-        <ul>
-          <li>Completed stitching script for local video and camera feed inputs</li>
-          <li>Set up hardware to process 2 feeds for consumption in the stitching script</li>
-          <li>Handle correction from within stitching algorithm</li>
-        </ul>
-      </li>
-      <li>Create Electron box application for handling display of streams and local videos.
-        <ul>
-          <li>Call python script to correct, stitch, and stream feeds from within Electron</li>
-        </ul>
-      </li>
-      <li>Set up a file system to store videos locally on the box</li>
-      <li>Improve stitching algorithm to work well with live video streams, fix distortion, and use cubemap if necessary
-        <ul>
-          <li>Vastly improved performance of stitching algorithm, moving from SIFT to SURF, brute-force to FLANN, and looking to move from SURF to FAST in the near future.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="priority-2-1">Priority 2</h3>
-<ul>
-  <li>The Box
-    <ul>
-      <li>Handle flexible identification of invalid feed inputs.</li>
-    </ul>
-  </li>
-  <li>Web Application
-    <ul>
-      <li>Get Django application up and running with Wowza streaming to React-enable frontend.</li>
-      <li>Set up RESTful endpoint for video upload into online storage</li>
-    </ul>
-  </li>
-  <li>Server-side
-    <ul>
-      <li>Get reliable Wowza streaming hosted in a PaaS offering (Heroku or AWS, preferably.)</li>
-      <li>Set up storage for archival of videos</li>
-    </ul>
-  </li>
-</ul>
-
-<h2 id="correspondance-to-original-requirements">Correspondance to Original Requirements</h2>
-<p>** These requirements map to the following items from our requirements list from the beginning of the project: **</p>
-
-<h3 id="priority-level-1">Priority Level 1</h3>
 
 <ol>
   <li>
@@ -528,23 +395,76 @@
     <p>The app should be able to query the database and get encoded video files</p>
   </li>
   <li>
-    <p>Officers should be able to click on archived videos and see the video displayed in the player.</p>
+    <p>Officers should be able to click on archived videos and see the video displayed in the player. They can pan around the video, pause the recording, and rewind.</p>
+  </li>
+  <li>
+    <p>DVR capability should be available in desktop and web apps</p>
+  </li>
+</ol>
+
+<h3 id="priority-2">Priority 2</h3>
+
+<ol>
+  <li>
+    <p>There will be a list of all live videos that will be identified by officer</p>
+  </li>
+  <li>
+    <p>The app will pipe in live videos from the devices on the cars.</p>
+  </li>
+</ol>
+
+<h2 id="requirements-realized">Requirements Realized</h2>
+<p>After completion of Sprint 5, we were able to complete the following requirements, all that we set out to complete in one form or another.</p>
+
+<h3 id="priority-1-1">Priority 1</h3>
+
+<ol>
+  <li>
+    <p>There will be a display of a table of all accessible archived videos. This table will be able to be filtered.</p>
+  </li>
+  <li>
+    <p>The app should be able to query the database and get encoded video files</p>
+  </li>
+  <li>
+    <p>Officers should be able to click on archived videos and see the video displayed in the player. They can pan around the video, pause the recording, and rewind.</p>
+  </li>
+  <li>
+    <p>DVR capability should be available in desktop and web apps</p>
+  </li>
+</ol>
+
+<h3 id="priority-2-1">Priority 2</h3>
+
+<ol>
+  <li>
+    <p>There will be a list of all live videos that will be identified by officer</p>
+  </li>
+  <li>
+    <p>The app will pipe in live videos from the devices on the cars.</p>
   </li>
 </ol>
 
 <h1 id="interfaces">Interfaces</h1>
-<p>The following interface views show the current state of the desktop application:
-<img src="../../images/sprint4/filter.png" alt="Unfiltered View" />
-<img src="../../images/sprint4/filter1.png" alt="Filtered View" />
-<img src="../../images/sprint4/video.png" alt="Archived Video View" />
-<img src="../../images/sprint4/settings.png" alt="Settings View" /></p>
+<p>The following interface views show the final state of the desktop application:</p>
 
-<p>Also, the CLI for testing the stitching and streaming funcationality of the application has been vastly improved. Here is an example of that improvement:
-<img src="../../images/sprint4/CLI.png" alt="Testing CLI" /></p>
+<p><img src="../../images/sprint5/desktop-dash.png" alt="Desktop Dashboard" />
+<img src="../../images/sprint5/desktop-live.png" alt="Desktop Live View" />
+<img src="../../images/sprint5/desktop-dvr.png" alt="Desktop DVR View" />
+<img src="../../images/sprint5/desktop-preferences.png" alt="Desktop Preferences" />
+<img src="../../images/sprint5/desktop-admin.png" alt="Desktop Admin Page" /></p>
 
-<p>As far as interfaces go, we also cleaned up our website navigation menu. Working with it in the past was messy when trying to navigate to different aspects of different sprints, so we cleaned up the CSS to make sure that menus did not overlap and confuse the user. This is what it looks like now:</p>
+<p>The following interface view shows the final state of the web application:</p>
 
-<p><img src="../../images/sprint4/navbar.png" alt="Navbar Fix" /></p>
+<p><img src="../../images/sprint5/web.png" alt="Web Application" /></p>
+
+<p>The following images show examples of the stitch that we were able to achieve at the end of the semester:</p>
+
+<p><img src="../../images/middle-shirt.png" alt="Stitch of Shirt" /></p>
+
+<p><img src="../../images/stitch-face.png" alt="Stitch of Face" /></p>
+
+<h1 id="final-evaluation">Final Evaluation</h1>
+<p>Though we did not end up with exactly what we had hoped to end up with at the end of the semester, we came much farther than I ever could have imagined. Possibly the hardest part of the project, stitching, became a problem as we got closer and closer to the end of the project, but we were able to find a way to make it work, at least in the form of a proof of concept. Using a plethora of new hardware and software that none of the people in our group had ever used, we were able to make a lot of things happen, and it came through a lot of hard work. I am proud of where we ended up as a team, and I think our work reflects the many many hours that we put in to bring this thing to fruition.</p>
 
 
 </div>
