@@ -8,7 +8,7 @@ title: Team Rules
 
 2. There will be MWF Slack standups when development starts to address what each member is working on, how it is going and any blockers.
 
-3. Slack will be primary form of communication. Phone calls and facetime will be used for urgent communication.
+3. Slack will be primary form of communication. Phone calls and FaceTime will be used for urgent communication.
 
 4. If a team member anticipates a missed deadline they should be transparent about it in the next MWF Slack standup.
 

@@ -3,7 +3,7 @@ layout: page
 title: Use Cases
 ---
 
-This portion of the website highlights the use cases portion of the functional specification for the requirements sprint. The use cases are broken down by application (i.e. the on-box app and the dvr web app).
+This portion of the website highlights the use cases portion of the functional specification for the requirements sprint. The use cases are broken down by application (i.e. the on-box app and the DVR web app).
 
 
 ## Web Application
@@ -20,7 +20,7 @@ This portion of the website highlights the use cases portion of the functional s
 	- Pan around the 360 video
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes
+	- The user can scroll through a list of all videos
 	- Filter to find by date, or officer ID
 
 - Watch Archived Video
@@ -46,7 +46,7 @@ This portion of the website highlights the use cases portion of the functional s
 	- See the situation around the car from a live no-latency feed on the in-car box.
 
 - Filter Archived Videos
-	- The user can scroll through a list of all vidoes associated with their account
+	- The user can scroll through a list of all videos associated with their account
 	- Filter to find by date, etc.
 
 - Watch Archived Video
@@ -67,5 +67,3 @@ This portion of the website highlights the use cases portion of the functional s
 - Stream Video (use case of program to enable streamed video in on-box and web applications)
 	- Send stitched video to a server for storage
 	- Live stream stitched video from server storage and live device stitched footage
-
-

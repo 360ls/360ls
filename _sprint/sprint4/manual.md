@@ -21,7 +21,7 @@ following steps.
 
 - Set up (Desktop Application):
   1. Make sure all dependencies are installed on the box before you try to run the application
-  2. Download the desktop application from our github page [here](https://github.com/360ls/desktop/releases)
+  2. Download the desktop application from our Github page [here](https://github.com/360ls/desktop/releases)
   3. You can find detailed instructions on how to install and run the code [here](https://360ls.github.io/360ls/sprint/sprint4/code)
   4. Run `sudo dpkg -i 360ls-Desktop-Application-1.0.0-amd64.deb`.
 
@@ -108,7 +108,7 @@ $ git clone https://github.com/360ls/stitch-flex.git
   - Make sure you have configured the correct ordering of camera indexes, i.e. left index is really on the left
   - The cameras should be in live feed mode, not playback mode.
   - The cameras should not be in fish eye mode.
-  - Verify all of the dependicies have been correctly installed with the correct version numbers.
+  - Verify all of the dependencies have been correctly installed with the correct version numbers.
 
 
 - Viewing live stream on Wowza:

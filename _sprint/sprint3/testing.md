@@ -20,7 +20,7 @@ title: Test Plan
   - Test the piping of images from python stitching module to the ffmpeg encoding. Do the output images from the stitching get correctly piped from our module to the ffmpeg rtmp stream?
   - Test the configuration of 4 live camera streams into our stitching module. Can the stitching script produce a video of 4 cameras stitched together?
   - Test the connection between AWS wowza server and our web app. Can we receive a live stream video onto our Django/Python app?
-  
+
 
 - Acceptance Tests:
   - Test viewing an output video from 4 live cameras stitched together. Look for things like low quality, lagging, warped around the sides, misalignment.
@@ -45,12 +45,11 @@ title: Test Plan
   - Test sending video files over RTMP stream to Wowza server
   - Test sending a live stream video over RTMP to wowza server
 
-- Streaming Tests: 
+- Streaming Tests:
   - Test viewing a live streamed video on the Wowza server.
-  - Look for errors like laggin, jumping, discoloration, buffering, etc.
+  - Look for errors like lagging, jumping, discoloration, buffering, etc.
   - Test viewing a video on the web app
   - Test viewing a live stream video pushed from the Wowza server to the web app
 
 - Integration Tests:
-  - Test taking 4 live streams, stitch them together, pipe the output to ffmpeg, encode these frames into rtmp, push this stream to a wowza server, and view the live stream on our web app. 
-  
+  - Test taking 4 live streams, stitch them together, pipe the output to ffmpeg, encode these frames into rtmp, push this stream to a wowza server, and view the live stream on our web app.

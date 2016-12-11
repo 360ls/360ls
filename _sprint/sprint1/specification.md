@@ -3,7 +3,7 @@ layout: page
 title: Functional Specification - Sprint 1
 ---
 
-This portion of the website highlights the functional specification for the first development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint. 
+This portion of the website highlights the functional specification for the first development sprint. This functional specification includes use cases, requirements, and interfaces targeted and achieved during that sprint.
 
 # Use Cases
 
@@ -12,7 +12,7 @@ This portion of the website highlights the functional specification for the firs
 ### On-box Application
 - Display a Stitched Video (use case of program to enable watching live video)
 	- Take video input from four camera streams and stitch it into one video
-	- Convert that stitched video into multiple encodings of a 360 degree video 
+	- Convert that stitched video into multiple encodings of a 360 degree video
 	- Send 360 degree video to server to interact with streaming service
 - Stream Video (use case of program to enable streamed video in on-box and web applications)
 	- Send stitched video to a server for storage
@@ -26,13 +26,13 @@ This portion of the website highlights the functional specification for the firs
 	- Take video and image input from four local sources and stitch together
 - Stream Video (use case of program to enable streamed video in on-box and web applications)
 	- Output stitched video to a socket for RTMP data stream consumption
- 
+
 
 ## Summary of Use Case Fulfillment
-During Sprint 1, we sought to develop a functioning stitching script that would read in input from 4 cameras, stitch those inputs into one 360 degree video, and save multiple encoded video files to local disk. We did not intend 100% accuracy of stitching or necesarily robust implementation, but we wanted an MVP to make sure that the stitching aspect of our project, the most crucial part, was in fact possible and implementable in the time that we have alotted for the semester. As a result of the sprint, we were able to complete the majority of our Display a Stitched Video use case, but we still have a good way to go with the Stream Video use case.
+During Sprint 1, we sought to develop a functioning stitching script that would read in input from 4 cameras, stitch those inputs into one 360 degree video, and save multiple encoded video files to local disk. We did not intend 100% accuracy of stitching or necesarily robust implementation, but we wanted an MVP to make sure that the stitching aspect of our project, the most crucial part, was in fact possible and implementable in the time that we have allotted for the semester. As a result of the sprint, we were able to complete the majority of our Display a Stitched Video use case, but we still have a good way to go with the Stream Video use case.
 
 # Requirements
- 
+
 ## Requirements Targeted
 At the beginning of Sprint 1, we prioritized our requirements for the sprint as follows (with prioritization representing order of approach, not necessarily in order of project value):
 
@@ -59,7 +59,7 @@ After completion of Sprint 1, we were able to complete the following requirement
 - The Box
 	- Stitch 4 videos together (9/18 - 9/28)
 		- Completed stitching script for local (4 videos or 4 images) and camera (2 cameras) inputs.
-	- Developed command line interface to interact with the stitching mechanism. 
+	- Developed command line interface to interact with the stitching mechanism.
 	- Implemented continuous integration deployment via Travis CI
 
 ### Priority 2
@@ -72,10 +72,3 @@ Though we did not originally target completion of any of the interfaces affiliat
 
 ![Stitcher CLI](../../images/Sprint1CLI.png)
 ![Stitcher CLI GIF](../../images/Sprint1CLI.gif)
-
-
-
-
-
-
-
